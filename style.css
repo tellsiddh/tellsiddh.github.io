@@ -63,36 +63,17 @@
 }
 
 /* spacing on all sections */
-/* #about, #services, #portfolio, #contact {
-    margin-top: 4rem;
-    padding-top: 4rem;
-} */
+#about, #experience, #projects, #contact {
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
 #contact {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 /* about section image css */
 .imageAboutPage {
     width: 100%;
-}
-
-/* services section css */
-.servicesText.card {
-    height: 280px;
-    cursor: pointer;
-  }
-.servicesIcon {
-    font-size: 36px;
-    text-align: center;
-    width: 100%;
-}
-.card-title {
-    text-align: center;
-}
-.card:hover .servicesIcon {
-    color: #008000;
-}
-.servicesText:hover {
-    border: 1px solid #008000;
 }
 
 /* social media icons styling */
@@ -102,15 +83,40 @@
     display: block;
     text-align: left;
 }
-.fa-envelope:hover,.fa-github:hover,.fa-linkedin:hover, .fa-phone:hover {
-    color: #008000;
+.fa-envelope:hover,.fa-github:hover,.fa-linkedin:hover, .fa-phone:hover, .fa-map-marker-alt:hover{
+    color: #0678e3;
 }
-.fab, .fas {
+.fab, .fas{
+    color: black;
+}
+
+.custom-icon {
+color: white;
+font-size: 36px;
+margin-right: 20px;
+}
+
+.custom-icon:hover {
+color: 0563bb;
+}
+
+.custom-btn {
+    background-color: black;
     color: white;
+    transition: background-color 0.3s;
 }
+
+.custom-btn:hover {
+    background-color: 0563bb;
+}
+
+.card-title {
+    text-align: center;
+}
+
 /* footer styling */
 #footer {
-    background-color: BLACK;
+    background-color: rgb(215, 215, 215);
     text-align: center;
-    color: white;
+    color: black;
 }
