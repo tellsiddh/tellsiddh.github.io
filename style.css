@@ -88,6 +88,7 @@
 }
 .fab, .fas{
     color: black;
+    margin-top: 15px;
 }
 
 .custom-icon {
@@ -98,16 +99,6 @@ margin-right: 20px;
 
 .custom-icon:hover {
 color: 0563bb;
-}
-
-.custom-btn {
-    background-color: black;
-    color: white;
-    transition: background-color 0.3s;
-}
-
-.custom-btn:hover {
-    background-color: 0563bb;
 }
 
 .card-title {
