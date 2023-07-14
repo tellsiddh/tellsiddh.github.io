@@ -1,344 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Siddharth Jain - Portfolio</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- linking css file -->
-  <link rel="stylesheet" href="style.css">
-  <!-- bootstrap CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Siddharth Jain - Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Updated: Jun 13 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
-<body style="font-family: Arial;">
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
-        <div class="container">
-            <a class="navbar-brand" style="font-size: x-large;" href="#"><strong>Siddharth Jain</strong></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Work Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="files/Siddharth Jain Resume.pdf" target="_blank">Download Resume!</a>  
-                    </li>
-                </ul>
-            </div>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav id="navbar" class="navbar nav-menu">
+      <ul>
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about" class="nav-link scrollto active"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="#education" class="nav-link scrollto active"><i class="bx bxs-graduation"></i>
+            <span>Education</span></a></li>
+        <li><a href="#skills" class="nav-link scrollto active"><i class="bx bx-brain"></i> <span>Skills</span></a></li>
+        <li><a href="#experience" class="nav-link scrollto active"><i class="bx bx-briefcase"></i>
+            <span>Experience</span></a></li>
+        <li><a href="#portfolio" class="nav-link scrollto active"><i class="bx bx-collection"></i>
+            <span>Projects</span></a></li>
+        <li><a href="#contact" class="nav-link scrollto active"><i class="bx bx-envelope"></i> <span>Contact</span></a>
+        </li>
+        <li><a href="assets/files/Siddharth Jain Resume.pdf" class="nav-link scrollto" target="_blank"><i
+              class="bx bx-file-blank"></i> <span>Resume Download</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container">
+      <h1>Siddharth Jain</h1>
+      <p>I'm an <span style="color: #0563bb;">Embedded Systems Engineer</span></p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/tellsiddh/" target="_blank" class="linkedin"><i style="color: #0563bb;"
+            class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/tellsiddh" target="_blank" class="github"><i style="color: #0563bb;"
+            class="bx bxl-github"></i></a>
+        <a href="mailto:tellsiddh@gmail.com" target="_blank" class="gmail"><i style="color: #0563bb;"
+            class="bx bxl-gmail"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <main id="main">
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About</h2>
+          <p>As a graduate student at Arizona State University specializing in Robotics and Autonomous Systems, I have
+            honed my skills in designing, manufacturing, and programming through my diverse professional experiences.
+
+          </p>
         </div>
-    </nav>
-    
-    <!-- main banner -->
-    <section class="bgimage" id="home">
-        <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 d-flex justify-content-center">
+            <img src="assets/img/image_self.jpg" class="img-fluid profile-pic" alt>
+          </div>
+
+
+          <div class="col-lg-8 pt-4 pt-lg-0 content">
+            <h3 style="color: #0563bb;">Embedded Systems, Robotics &amp; Controls Enthusiast
+            </h3>
+            <br>
             <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-                <h2 class="hero_title">Hi, it's me Siddharth</h2>
-                <p class="hero_desc">Embedded Systems Engineer</p>
-                    <a href="https://www.github.com/tellsiddh" target="_blank"><i class="fab fa-github custom-icon"></i></a>
-                    <a href="https://www.linkedin.com/in/tellsiddh/" target="_blank"><i class="fab fa-linkedin custom-icon"></i></a>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class='bx bxs-graduation'></i>
+                    <strong>Highest Education:</strong> Master of Science
+                  </li>
+                  <li><i class='bx bxs-book'></i>
+                    <strong>Majors:</strong> Robotics and Autonomous Systems
+                  </li>
+                </ul><br>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bx bx-current-location"></i>
+                    <strong>City:</strong> Tempe, AZ
+                  </li>
+                  <li><i class='bx bxl-gmail'></i>
+                    <strong>Email:</strong><a href="mailto:tellsiddh@gmail.com" style="color:
+                                          #0563bb;"> tellsiddh@gmail.com</a>
+                  </li>
+                </ul><br>
+              </div>
             </div>
+            <p>
+              <i class="bx bx-loader-alt"></i> Design, and program embedded systems using various hardware (NRF BLE,
+              ESP32, Raspberry Pi).<br>
+              <br>
+              <i class="bx bx-loader-alt"></i> Skilled in utilizing software technologies such as Docker, Solidworks,
+              Arduino IDE, and Altium.<br>
+              <br>
+              <i class="bx bx-loader-alt"></i> Proficient in working with protocols such as SPI, I2C, CAN Bus, and RF
+              integration (LoRa, Wi-Fi, BLE)<br>
+              <br>
+              <i class="bx bx-loader-alt"></i> AWS services utilization (IoT Core, Lambda, DynamoDB) for scalable
+              embedded systems solutions.<br>
+
+              <!-- <i class="bx bx-loader-alt"></i> Proficient in designing, manufacturing, and programming embedded systems using a diverse range of hardware, including Semtech SX12xx, NRF BLE, ESP32, SAMD21, Arm Cortex-M microcontrollers, ATmega, and Raspberry Pi.
+
+<i class="bx bx-loader-alt"></i> Skilled in utilizing software technologies such as Docker, ROS2, Solidworks, Autodesk Fusion 360, Arduino IDE, Altium, and Microsoft Office to develop innovative embedded systems solutions.
+
+<i class="bx bx-loader-alt"></i> Extensive experience in conducting research and implementing projects in the field of robotics and autonomous systems, demonstrating expertise in areas such as reinforcement learning, deep learning, optimal control, and modeling and control of robots.
+
+<i class="bx bx-loader-alt"></i> Proficient in working with protocols such as SPI, I2C, CAN Bus, UART, and RF integration (ZigBee, LoRa, Wi-Fi, BLE), enabling seamless communication and integration of components in embedded systems.
+
+<i class="bx bx-loader-alt"></i> Skilled in utilizing AWS services such as IoT Core, Lambda, Timestream, and DynamoDB, leveraging the power of cloud computing for scalable and efficient embedded systems solutions.
+
+<i class="bx bx-loader-alt"></i> Excellent problem-solving skills and attention to detail, ensuring the quality and reliability of embedded systems through thorough testing, data analysis, and optimization. -->
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="interests container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4">
+          <div class="icon-box">
+            <i style="color: #0563bb;" class="ri-cpu-line"></i>
+            <h3>Embedded Systems</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i style="color: #0563bb;" class="ri-u-disk-line" style="color: #5578ff;"></i>
+            <h3>Robotics and Controls</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i style="color: #0563bb;" class="ri-mind-map" style="color: #e80368;"></i>
+            <h3>Machine Learning</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i style="color: #0563bb;" class="ri-cloud-line" style="color: #28a745;"></i>
+            <h3>AWS</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <section id="education" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Education</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-12" style="display:
+                  inline-block;">
+            <div class="col-md-5 mt-5 mt-md-0 icon-box" data-aos-delay="100" style="padding:0px
+                      0px;padding-bottom: 5px;display: inline-block;
+                      border-radius: 0.5rem;">
+              <img src="assets/img/asu.png" class="img-fluid" alt>
+              <h4 style="text-align:center;padding: 0px 10px;">Arizona State University<br>
+              </h4>
+              <h5 style="text-align:center;padding: 0px 10px;"><a href="assets/files/ASU_Transcript.pdf" target="_blank"
+                  style="color:#ea502a"><em>&nbsp;&nbsp;&nbsp;&nbsp;Master of Science </em> <sup><i class="fa
+                        fa-external-link" style="font-size:12px"></i></sup></a></h5>
+              <h6 style="text-align:center;padding: 0px
+                          10px;color:#ea502a"><em>(Robotics and Autonomous Systems)</em>
+              </h6>
+              <p style="text-align:center;padding: 0px 10px;">August 2022 - May 2024</p>
+              <br>
+              <h6 style="text-align:center;padding: 0px 10px;">Relevant Coursework:
+              </h6>
+              <br>
+              <h6 style="text-align:center;padding: 0px 10px;">Embedded Machine Learning, Optimal Control, Reinforcement
+                Learning, Multi-Robot Systems
+              </h6>
             </div>
+            <div class="col-md-1 mt-1 mt-md-0 icon-box" data-aos-delay="100" style="padding:0px
+                      0px;padding-bottom: 5px;display: inline-block;">
+            </div>
+            <div class="col-md-5 mt-5 mt-md-0 icon-box" data-aos-delay="100" style="padding:0px
+                      0px;padding-bottom: 5px;display: inline-block;
+                      border-radius: 0.5rem;">
+              <img src="assets/img/dj.png" class="img-fluid" alt>
+              <h4 style="text-align:center;padding: 0px 10px;">D. J. Sanghvi College of Engineering<br>
+              </h4>
+              <h5 style="text-align:center;padding: 0px 10px;"><a href="assets/files/MU Transcript - Siddharth Jain.pdf"
+                  target="_blank" style="color:#ea502a"><em>&nbsp;&nbsp;&nbsp;&nbsp;Bachelor of Engineering </em>
+                  <sup><i class="fa fa-external-link" style="font-size:12px"></i></sup></a></h5>
+              <h6 style="text-align:center;padding: 0px
+                          10px;color:#ea502a"><em>(Mechanical Engineering)</em> </h6>
+              <p style="text-align:center;padding: 0px 10px;">August 2018 - May 2022</p>
+              <br>
+              <h6 style="text-align:center;padding: 0px 10px;">Relevant Coursework:
+              </h6>
+              <br>
+              <h6 style="text-align:center;padding: 0px 10px;">
+                Robotics, Industrial Electronics, CAD CAM CAE, Database Management Systems
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+        </div>
+        <div class="skills-content">
+          <div class="category-title">
+            <h3><strong>Languages</strong></h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fab fa-python skill-icon"></i>
+            <h3>Python</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-code skill-icon"></i>
+            <h3>C++</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-calculator skill-icon"></i>
+            <h3>MATLAB & Simulink</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-microchip skill-icon"></i>
+            <h3>Embedded C</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-database skill-icon"></i>
+            <h3>SQL</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fab fa-windows skill-icon"></i>
+            <h3>PowerShell</h3>
+          </div>
+          <div class="category-title">
+            <h3><strong>Software Tools</strong></h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fab fa-docker skill-icon"></i>
+            <h3>Docker</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-robot skill-icon"></i>
+            <h3>ROS2</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-cog skill-icon"></i>
+            <h3>Solidworks</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-cube skill-icon"></i>
+            <h3>Autodesk Fusion 360</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-arduino skill-icon"></i>
+            <h3>Arduino IDE</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-share-alt skill-icon"></i>
+            <h3>Git</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fab fa-windows skill-icon"></i>
+            <h3>Microsoft Office</h3>
+          </div>
+          <div class="category-title">
+            <h3><strong>Hardware</strong></h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fab fa-free-code-camp skill-icon"></i>
+            <h3>FreeRTOS</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-robot skill-icon"></i>
+            <h3>Gazebo</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fab fa-react skill-icon"></i>
+            <h3>React Native</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fab fa-connectdevelop skill-icon"></i>
+            <h3>MQTT</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fab fa-ubuntu skill-icon"></i>
+            <h3>Ubuntu</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fab  fa-tensorflow skill-icon"></i>
+            <h3>Tensorflow</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-flask skill-icon"></i>
+            <h3>Scikit-Learn</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-fire skill-icon"></i>
+            <h3>PyTorch</h3>
+          </div>
+          <div class="category-title">
+            <h3><strong>Technology</strong></h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-microchip skill-icon"></i>
+            <h3>Semtech SX12xx</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fab fa-bluetooth skill-icon"></i>
+            <h3>NRF BLE</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-wifi skill-icon"></i>
+            <h3>ESP32</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-microchip skill-icon"></i>
+            <h3>SAMD21</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-microchip skill-icon"></i>
+            <h3>Arm Cortex-M</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-microchip skill-icon"></i>
+            <h3>ATmega</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fab fa-raspberry-pi skill-icon"></i>
+            <h3>Raspberry Pi</h3>
+          </div>
+
+          <div class="category-title">
+            <h3><strong>Protocols</strong></h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-arrows-alt-h skill-icon"></i>
+            <h3>SPI</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-project-diagram skill-icon"></i>
+            <h3>I2C</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-network-wired skill-icon"></i>
+            <h3>CAN Bus</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-exchange-alt skill-icon"></i>
+            <h3>UART</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-wifi skill-icon"></i>
+            <h3>Wi-Fi:</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fas fa-satellite-dish skill-icon"></i>
+            <h3>Zigbee, Lora</h3>
+          </div>
+          <div class="skills-box">
+            <i style="color: #0563bb;" class="fab fa-bluetooth skill-icon"></i>
+            <h3>BLE</h3>
+          </div>
+          <div class="category-title">
+            <h3><strong>AWS</strong></h3>
+          </div>
+          <div class="skills-box">
+            <img src="assets/vendor/aws/iotcore.svg" alt="AWS Lambda" class="aws-skill-icon filter-blue-iot">
+            <h3>IoT Core</h3>
+          </div>
+          <div class="skills-box">
+            <img src="assets/vendor/aws/lambda2.svg" alt="AWS Lambda" class="aws-skill-icon filter-blue-lambda">
+            <h3>Lambda</h3>
+          </div>
+          <div class="skills-box">
+            <img src="assets/vendor/aws/timestream.svg" alt="AWS Lambda" class="aws-skill-icon filter-blue-dynamo">
+            <h3>Timestream</h3>
+          </div>
+          <div class="skills-box">
+            <img src="assets/vendor/aws/dynamoDB.svg" alt="AWS Lambda" class="aws-skill-icon filter-blue-dynamo">
+            <h3>DynamoDB</h3>
+          </div>
+          <div class="skills-box">
+            <img src="assets/vendor/aws/s3.svg" alt="AWS Lambda" class="aws-skill-icon filter-blue-s3">
+            <h3>S3 Buckets</h3>
+          </div>
+
         </div>
     </section>
 
-    <section id="about">
-        <div class="container mt-4 pt-4">
-            <h1 class="text-center">About Me</h1>
-            <div class="row mt-4">
-                <div class="col-lg-4">
-                    <img src="images/about.jpg" class="imageAboutPage" alt="">
-                    <br>
-                    <br>
-                </div>
-    
-                <div class="col-lg-8">
-                    <p>
-                        As a graduate student at Arizona State University majoring in Robotics and Autonomous Systems, I have gained valuable experience in designing, manufacturing, and programming through my various job positions.
-                    </p>
-                    <div class="row mt-3">
-                        <div class="col-md-12">
-                            
-                                <strong>Master of Science, Robotics and Autonomous Systems</strong>
-                                <ul>
-                                <li>Relevant Coursework: Reinforcement Learning, Deep Learning, Embedded Machine Learning, Optimal Control, Modelling
-                                    and Control of Robots</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <!-- <p>
-                            I have extensive experience in embedded systems development, firmware writing for 3D printers, and designing LoRa and Bluetooth mesh networks. Additionally, I am skilled in control systems design, including creating controllers for robotic movement and designing safety circuits. My expertise also covers robotics with ROS, PCB design using KiCAD and Altium Designer, and programming in C++, Python, and MATLAB & Simulink.
-                        </p>
-                        <br> -->
-                        <p>
-                            <strong>Languages: </strong>
-                            Python, C++, MATLAB & Simulink, Embedded C, SQL, PowerShell
-                        </p>
-                        <p>
-                            <strong>Software: </strong>
-                            Docker, ROS2, Solidworks, Autodesk Fusion 360, Arduino IDE, Altium, Microsoft Office
-                        </p>
-                        <p>
-                            <strong>Hardware: </strong>
-                            Semtech SX12xx, NRF BLE, ESP32, SAMD21, Arm Cortex-M microcontrollers, ATmega, Raspberry Pi
-                        </p>
-                        <p>
-                            <strong>Technologies: </strong>
-                            FreeRTOS, Gazebo, React Native, MQTT, Ubuntu, Tensorflow, Scikit-Learn, PyTorch
-                        </p>
-                        <p>
-                            <strong>Protocols: </strong>
-                            SPI, I2C, CAN Bus, UART, RF integration (ZigBee, LoRa, Wi-Fi, BLE)
-                        </p>
-                        <p>
-                            <strong>AWS: </strong>
-                            IoT Core, Lambda, Timestream, DynamoDB, S3 Buckets
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <section id="experience" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Experience</h2>
         </div>
-    </section>
-
-    <!-- portfolio section-->
-    <section id="experience">
-        <div class="container mt-3">
-            <h1 class="text-center">Work Experience</h1>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card">
-                        <img class="card-img-top" src="images/UTO.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title mt-3">Embedded Systems Engineer</h4>
-                            <h5 class="card-title mt-3">Mobile Systems and IoT</h5>
-                            <p class="card-text">• Engineered a self-sustained proprietary UHF off-grid full mesh protocol for ASU cart tracking and smart campus IoT initiative.
-                                <br>• Developed a Bluetooth Low Energy mesh network using ESP32s for SOS signals via a self-developed React-Native application.
-                                <br>• Wrote Lambda Functions with API Gateways and Timestream to obtain real-time location data as well as information about active
-                                nodes around campus.
-                                <br>• Programmed mpu9250 for deep sleep acceleration-based interrupt and achieved 3 years of battery life for the cart tracker.</p>
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="text">
-                                    <a href="https://tech.asu.edu/about" target="_blank" class="btn btn-outline-primary">Link</a>
-                                </div>
-                                </div>
-                                <div class="col-8">
-                                    <div class="text">
-                                        Oct 2022 - Current
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/LTI.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title mt-3">Graduate Student Researcher</h4>
-                            <h5 class="card-title mt-3">BIRTH LAB</h5>
-                            <p class="card-text">• Designed an articulated 3-axis linear cartesian robot attached to a 6-axis load cell with a closed-loop controller to perform tests that were used to determine the frictional characteristics of the gripper pads fabricated for the Lizard Inspired Tube Inspection (LTI) robot.
-                               <br>• Designed and fabricated gripper pads with curved textured surfaces using a Polydimethylsiloxane (PDMS) polymer to enable the LTI robot to perform friction-based mobility on curved surfaces irrespective of the material and surface texture.</p>
-                            <div class="row">
-                            <div class="col-4">
-                                <div class="text">
-                                <a href="https://birth.engineering.asu.edu/" target="_blank" class="btn btn-outline-primary">Link</a>
-                            </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="text">
-                                    Dec 2022 - Current
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/q3fRnUZIIJc" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title mt-3">Vice Captain</h4>
-                            <h5 class="card-title mt-3">DJS Kronos India</h5>
-                            <p class="card-text">• Headed and Co-founded the electric ATV team powered by a 8kWh BLDC Motor and a custom 48V Li-ion Battery pack.
-                                <br>• Incorporated 15+ sensors based on I2C and SPI communication protocol to collect data in real time.
-                                <br>• Simulated the vehicle’s performance on MATLAB and Simulink resulting in a 17% more efficient design.
-                                </p>
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="text">
-                                    <a href="https://www.instagram.com/djs_kronos_india/" target="_blank" class="btn btn-outline-primary">Link</a>
-                                </div>
-                                </div>
-                                <div class="col-8">
-                                    <div class="text">
-                                    Mar 2019 - May 2021
-                                </div>
-                            </div>
-                            </div>
-                    </div>
-                </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos-delay="100" style="padding-top: 0; padding-bottom: 0;
+                        border-radius: 0.5rem;">
+              <br>
+              <h4 style="text-align:left;"><a href="https://tech.asu.edu/about" style="color:
+                                #0563bb;" target="_blank">Enterprise Technology
+                  <sup><i style="color: #0563bb;" class="fa fa-external-link" style="font-size:12px"></i></sup></a><br>
+              </h4>
+              <span style="float: right">
+                <h5 style="text-align:left;">October 2022 - Present</h5>
+              </span>
+              <h4 style="text-align:left;color:#000000"><em>Embedded Systems Engineer</em></h4>
+              <ul style="text-align:left;">
+                <li><i class="bx bx-loader-alt"></i> Engineered a self-sustained proprietary UHF off-grid full mesh
+                  protocol for ASU cart tracking and smart campus IoT initiative.</li>
+                <li><i class="bx bx-loader-alt"></i> Developed a Bluetooth Low Energy mesh network using ESP32s for SOS
+                  signals via a self-developed React-Native application.</li>
+                <li><i class="bx bx-loader-alt"></i> Wrote Lambda Functions with API Gateways and Timestream to obtain
+                  real-time location data as well as the active nodes around campus.</li>
+                <li><i class="bx bx-loader-alt"></i> Programmed mpu9250 for deep sleep acceleration-based interrupt and
+                  achieved 3 years of battery life for the cart tracker.</li>
+              </ul>
+              <br>
             </div>
+            <br>
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos-delay="100" style="padding-top: 0; padding-bottom: 0;
+                        border-radius: 0.5rem;">
+              <br>
+              <h4 style="text-align:left;"><a href="https://birth.engineering.asu.edu/" style="color: #0563bb;"
+                  target="_blank">Bio-Inspired Robotics, Technology and Healthcare Lab (BIRTH Lab) <sup><i
+                      style="color: #0563bb;" class="fa fa-external-link" style="font-size:12px"></i></sup></a><br>
+              </h4>
+              <span style="float: right">
+                <h5 style="text-align:left;">Dec 2022 - Present</h5>
+              </span>
+              <h4 style="text-align:left;color:#000000"><em>Research Assistant</em></h4>
+              <ul style="text-align:left;">
+                <li>
+                  <i class="bx bx-loader-alt"></i> Designed an articulated 3-axis linear cartesian robot attached to a
+                  6-axis load cell with a closed-loop controller to perform tests that were used to determine the
+                  frictional characteristics of the gripper pads fabricated for the Lizard Inspired Tube Inspection
+                  (LTI) robot.
+                </li>
+                <li>
+                  <i class="bx bx-loader-alt"></i> Designed and fabricated gripper pads with curved textured surfaces
+                  using a Polydimethylsiloxane (PDMS) polymer to enable the LTI robot to perform friction-based mobility
+                  on curved surfaces irrespective of the material and surface texture.
+                </li>
+              </ul><br>
             </div>
-    </section>
-
-    <!-- portfolio section-->
-    <section id="projects">
-        <div class="container mt-3">
-            <h1 class="text-center">Projects</h1>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card">
-                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/ftylrpc0TUw" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Dexterous Manipulation with a Robotic Hand</h4>
-                            <p class="card-text">• Compared various on-policy methods like DAPG, Monte-Carlo return methods like AWR to Advantage Weighted Actor Critic giving 20% higher success rate.
-                                <br>• Reduced the time required to learn a range of robotic skills to practical time-scales by incorporating prior offline data along with online tuning.</p>
-                            <div class="text-center">
-                                <a href="https://github.com/tellsiddh/awac-implementation" target="_blank" class="btn btn-outline-primary">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/BZZOMT-J5b0" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">UAV Line Follower Drone</h4>
-                            <p class="card-text">• Coded a Line Follower function for Parrot Mambo Mini-Drone.
-                                <br>• The drone used edge detection calculated the nearest edge by detecting specific HSV values of the track.
-                                <br>• The function was created on MATLAB and Simulink. It was then deployed to the drone via access point and bluetooth.
-                            </p>
-                            <div class="text-center">
-                                <a href="https://github.com/tellsiddh/UAV-line-follower" target="_blank" class="btn btn-outline-primary">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/DL.png" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Statistical Analysis of Machine Learning Algorithms for Fraud Detection</h4>
-                            <p class="card-text">• To evaluate the performance of machine learning algorithms in detecting fraud in a bank transaction dataset.
-                                <br>• Investigated the impact of preprocessing technique, one-hot encoding with SMOTE, and perform feature importance analysis to identify the most significant features. 
-                                <br>• Moreover, performed statistical tests to determine the significance of performance differences between the models and provide additional support for our findings.
-                            </p>
-                            <div class="text-center">
-                                <a href="https://github.com/tellsiddh/fraud-detection-ml-statistical-analysis" target="_blank" class="btn btn-outline-primary">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <br>
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos-delay="100" style="padding-top: 0; padding-bottom: 0;
+                        border-radius: 0.5rem;">
+              <br>
+              <h4 style="text-align:left;"><a href="https://www.instagram.com/djs_kronos_india/" style="color: #0563bb;"
+                  target="_blank">DJS Kronos India <sup><i style="color: #0563bb;" class="fa fa-external-link"
+                      style="font-size:12px"></i></sup></a>
+                <a href="https://www.youtube.com/watch?v=q3fRnUZIIJc" target="_blank"
+                  style="float:right; margin-left: 10px;">
+                  <i class="bx bxl-youtube" style="font-size:24px"></i>
+                </a>
                 <br>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/P9DKjQvbcVY" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Self Balancing Stewart Platform</h4>
-                            <p class="card-text">• Designed a closed-loop PID controller for linear actuators that controlled the position of every individual linkage of a stewart platform to balance the motion of the ball placed on the platform. Reduced Steady State Error by changing the integral value.</p>
-                            <div class="text-center">
-                                <a href="https://github.com/tellsiddh/stewart-platform-for-object-balancing" target="_blank" class="btn btn-outline-primary">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/DAQ.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Data Acquisition System</h4>
-                            <p class="card-text">• Developed a DAQ System to collect data from 12 sensors for data telemetry in real time using Arduino microcontroller.
-                                <br>• Integrated a GSM SIM 900 Module to Raspberry Pi Zero and transmitted sensor data using ThingSpeak Communication Library</p>
-                            <div class="text-center">
-                                <a href="https://www.instagram.com/djs_kronos_india/" class="btn btn-outline-primary">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+              </h4>
+              <span style="float: right">
+                <h5 style="text-align:left;">Mar 2019 - May 2021</h5>
+              </span>
+              <h4 style="text-align:left;color:#000000"><em>Vice Captain</em></h4>
+              <ul style="text-align:left;">
+                <li>
+                  <i class="bx bx-loader-alt"></i> Headed and Co-founded the electric ATV team powered by a 8kWh BLDC
+                  Motor and a custom 48V Li-ion Battery pack.
+                </li>
+                <li>
+                  <i class="bx bx-loader-alt"></i> Incorporated 15+ sensors based on I2C and SPI communication protocol
+                  to collect data in real time.
+                </li>
+                <li>
+                  <i class="bx bx-loader-alt"></i> Simulated the vehicle’s performance on MATLAB and Simulink resulting
+                  in a 17% more efficient design.
+                </li>
+              </ul><br>
             </div>
-    </section>
-          
-    <footer id="footer">
-        <div class="container-fluid">
-            <section id="contact">
-                <div class="container mt-1 contactContent">
-                    <h1 class="text-center">Contact Me</h1>
-                    <div class="row mt-1">
-                        <div class="col-md-3">
-                            <div class="container-fluid">
-                                <div class="social-icons mt-1">
-                                    <a href="https://www.github.com/tellsiddh" target="_blank"><i class="fab fa-github"><strong> github.com/tellsiddh</strong></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="container-fluid">
-                                <div class="social-icons mt-1">
-                                    <a href="https://www.linkedin.com/in/tellsiddh/" target="_blank"><i class="fab fa-linkedin"><strong> linkedin.com/in/tellsiddh/</strong></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="container-fluid">
-                                <div class="social-icons mt-1">
-                                    <a href="mailto:tellsiddh@gmail.com" target="_blank"><i class="fas fa-envelope"> tellsiddh@gmail.com</i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="container-fluid">
-                                <div class="social-icons mt-1">
-                                    <a href="tel:+16233267382" target="_blank"><i class="fas fa-phone"> +1 (623) 326-7382</i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- load javascript after loading all html content -->
-    <script src="script/script.js"></script>
+    <section id="portfolio" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Projects</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos-delay="100"
+              style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
+              <br>
+              <h4 style="text-align:left;">
+                <span style="color: #0563bb;">Dexterous Manipulation with a Robotic Hand</span> <sup><i
+                    style="color:#0563bb;font-size:12px;"></i></sup>
+                <a href="https://www.youtube.com/watch?v=ftylrpc0TUw" target="_blank"
+                  style="float:right; margin-left: 10px;">
+                  <i class="bx bxl-youtube" style="font-size:24px"></i>
+                </a>
+                <a href="https://github.com/tellsiddh/awac-implementation" target="_blank"
+                  style="float:right; margin-left: 10px;">
+                  <i class="bx bxl-github" style="font-size:24px"></i>
+                </a>
+                <a href="assets/files/Final_Report_Team#5_Jain_Robotic_Hand_Manipulation.pdf" target="_blank"
+                  style="float:right;">
+                  <i class="far fa-file" style="font-size:20px"></i>
+                </a>
+              </h4>
+              <!-- <span style="float: right"><h5 style="text-align:left;">Aug 2019 - Oct 2020</h5></span> -->
+              <h4 style="text-align:left;color:#000000"><em>AWAC, Reinforcement Learning</em></h4>
+              <ul style="text-align:left;">
+                <li><i class="bx bx-loader-alt"></i> Compared various on-policy methods like DAPG, Monte-Carlo return
+                  methods like AWR to Advantage Weighted Actor Critic giving 20% higher success rate.</li>
+                <li><i class="bx bx-loader-alt"></i> Reduced the time required to learn a range of robotic skills to
+                  practical time-scales by incorporating prior offline data along with online tuning.</li>
+              </ul><br>
+            </div>
+            <br>
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos-delay="100"
+              style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
+              <br>
+              <h4 style="text-align:left;">
+                <span style="color: #0563bb;">UAV Line Follower Drone</span> <sup><i
+                    style="color:#0563bb;font-size:12px;"></i></sup>
+                <a href="https://www.youtube.com/watch?v=BZZOMT-J5b0&t" target="_blank"
+                  style="float:right; margin-left: 10px;">
+                  <i class="bx bxl-youtube" style="font-size:24px"></i>
+                </a>
+                <a href="https://github.com/tellsiddh/UAV-line-follower" target="_blank" style="float:right;">
+                  <i class="bx bxl-github" style="font-size:24px"></i>
+                </a>
+              </h4>
+              <!-- <span style="float: right"><h5 style="text-align:left;">Aug 2019 - Oct 2020</h5></span> -->
+              <h4 style="text-align:left;color:#000000"><em>MATLAB, Simulink, Edge Detection</em></h4>
+              <ul style="text-align:left;">
+                <li><i class="bx bx-loader-alt"></i> Coded a Line Follower function for Parrot Mambo Mini-Drone. The
+                  drone used edge detection to calculate the nearest edge</li>
+                <li><i class="bx bx-loader-alt"></i> This was done using MATLAB and Simulink by detecting specific HSV
+                  values of the track. It was then deployed to the drone via access point and bluetooth.</li>
+              </ul><br>
+            </div>
+            <br>
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos-delay="100"
+              style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
+              <br>
+              <h4 style="text-align:left;">
+                <span style="color: #0563bb;">Statistical Analysis of Machine Learning Algorithms for Fraud
+                  Detection</span> <sup><i style="color:#0563bb;font-size:12px;"></i></sup>
+                <a href="https://github.com/tellsiddh/fraud-detection-ml-statistical-analysis" target="_blank"
+                  style="float:right; margin-left: 10px;">
+                  <i class="bx bxl-github" style="font-size:24px"></i>
+                </a>
+                <a href="assets/files/Statistical Analysis of Machine Learning Algorithms for Fraud Detection in Bank Transactions.pdf"
+                  target="_blank" style="float:right;">
+                  <i class="far fa-file" style="font-size:20px"></i>
+                </a>
+              </h4>
+              <!-- <span style="float: right"><h5 style="text-align:left;">Aug 2019 - Oct 2020</h5></span> -->
+              <h4 style="text-align:left;color:#000000"><em>Deep Learning, RNN, One-Hot Encoding</em></h4>
+              <ul style="text-align:left;">
+                <li><i class="bx bx-loader-alt"></i> To evaluate the performance of machine learning algorithms in
+                  detecting fraud in a bank transaction dataset.</li>
+                <li><i class="bx bx-loader-alt"></i> Investigated the impact of preprocessing technique, one-hot
+                  encoding with SMOTE, and perform feature importance analysis to identify the most significant
+                  features.</li>
+                <li><i class="bx bx-loader-alt"></i> Moreover, performed statistical tests to determine the significance
+                  of performance differences between the models and provide additional support for our findings.</li>
+              </ul><br>
+            </div>
+            <br>
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos-delay="100"
+              style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
+              <br>
+              <h4 style="text-align:left;">
+                <span style="color: #0563bb;">Self Balancing Stewart Platform</span> <sup><i
+                    style="color:#0563bb;font-size:12px;"></i></sup>
+                <a href="https://www.youtube.com/watch?v=P9DKjQvbcVY" target="_blank"
+                  style="float:right; margin-left: 10px;">
+                  <i class="bx bxl-youtube" style="font-size:24px"></i>
+                </a>
+                <a href="https://github.com/tellsiddh/stewart-platform-for-object-balancing" target="_blank"
+                  style="float:right;">
+                  <i class="bx bxl-github" style="font-size:24px"></i>
+                </a>
+              </h4>
+              <!-- <span style="float: right"><h5 style="text-align:left;">Aug 2019 - Oct 2020</h5></span> -->
+              <h4 style="text-align:left;color:#000000"><em>PID Controller, MATLAB, Simulink</em></h4>
+              <ul style="text-align:left;">
+                <li><i class="bx bx-loader-alt"></i> Designed a closed-loop PID controller for linear actuators that
+                  controlled the position of every individual linkage of a stewart platform to balance the motion of the
+                  ball placed on the platform. Reduced Steady State Error by changing the integral value.</li>
+              </ul><br>
+            </div>
+            <br>
+            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos-delay="100"
+              style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
+              <br>
+              <h4 style="text-align:left;">
+                <span style="color: #0563bb;">Data Acquisition System</span> <sup><i
+                    style="color:#0563bb;font-size:12px;"></i></sup>
+              </h4>
+              <!-- <span style="float: right"><h5 style="text-align:left;">Aug 2019 - Oct 2020</h5></span> -->
+              <h4 style="text-align:left;color:#000000"><em>GSM SIM 900, ThingSpeak</em></h4>
+              <ul style="text-align:left;">
+                <li><i class="bx bx-loader-alt"></i> Developed a DAQ System to collect data from 12 sensors for data
+                  telemetry in real time using Arduino microcontroller.</li>
+                <li><i class="bx bx-loader-alt"></i> Integrated a GSM SIM 900 Module to Raspberry Pi Zero and
+                  transmitted sensor data using ThingSpeak Communication Library</li>
+              </ul><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+        <div class="row mt-1 justify-content-center">
+          <div class="col-lg-12">
+            <div class="info d-flex flex-wrap justify-content-between">
+              <div class="email">
+                <a href="https://www.linkedin.com/in/tellsiddh/" target="_blank">
+                  <i class="bi bi-linkedin"></i>
+                  <h4>LinkedIn</h4>
+                  <p>www.linkedin.com/in/tellsiddh/
+                </a></p>
+              </div>
+
+              <div class="email">
+                <a href="https://www.linkedin.com/tellsiddh" target="_blank">
+                  <i class="bi bi-github"></i>
+                  <h4>Github</h4>
+                  <p>www.github.com/tellsiddh
+                </a></p>
+              </div>
+
+              <div class="email">
+                <a href="mailto:tellsiddh@gmail.com" target="_blank">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email</h4>
+                  <p>tellsiddh@gmail.com
+                </a></p>
+
+              </div>
+              <div class="phone">
+                <a href="tel:+16233267382">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call</h4>
+                  <p>+1 623 326 7382
+                </a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Siddharth Jain</span></strong>. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i style="color: #0563bb;" class="bx
+  bx-up-arrow-alt"></i></a>
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/iconify.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 
