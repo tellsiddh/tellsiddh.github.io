@@ -20,7 +20,7 @@ a {
 }
 
 a:hover {
-  color: #067ded;
+  color: #0563bb;
   text-decoration: none;
 }
 
@@ -44,8 +44,8 @@ h6 {
   right: 15px;
   bottom: 15px;
   background: #add8e6;
-  color: #0a0a0a;
   transition: display 0.5s ease-in-out;
+  color: #0563bb;
   z-index: 99999;
 }
 
@@ -57,8 +57,8 @@ h6 {
 }
 
 .back-to-top:hover {
-  color: #020202;
-  background: #0678e3;
+  background: #0563bb;
+  color: white;
   transition: background 0.2s ease-in-out;
 }
 /*--------------------------------------------------------------
@@ -280,11 +280,11 @@ h6 {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("../img/hero-bg2.png");
+  background-image: url("../img/hero-bg6.png");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.3;
+  opacity: 0.4;
   z-index: -1;
 }
 
@@ -322,13 +322,12 @@ h6 {
   text-align: center;
   font-size: 24px;
   display: inline-block;
-  color: #000000;
   line-height: 1;
   transition: 0.3s;
 }
 
 #hero .social-links a:hover {
-  background: #0678e3;
+  background: #0563bb;
   color: #fff;
   text-decoration: none;
 }
@@ -493,7 +492,7 @@ section {
 }
 
 .skills-box:hover {
-  background-color: #02225a;
+  background-color: #c8d1da;
 }
 
 .skills-box h3 {
@@ -503,17 +502,7 @@ section {
 }
 
 .skills-box:hover h3 {
-  color: #fff;
-}
-
-.skills-box .bx {
-  padding-top: 2rem;
-  font-size: 54px;
-  color: var(--main-color);
-}
-
-.skills-box:hover .bx {
-  color: #22cf91;
+  color: #000000;
 }
 
 .skills-box a {
@@ -535,24 +524,7 @@ section {
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  fill: #0563bb; /* Your desired color here */
-}
-
-.filter-blue-dynamo {
-  filter: invert(0%) sepia(0%) saturate(80%) hue-rotate(300deg) brightness(100%)
-    contrast(96%);
-}
-.filter-blue-iot {
-  filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(140deg) brightness(90%)
-    contrast(120%);
-}
-.filter-blue-s3 {
-  filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(140deg)
-    brightness(100%) contrast(90%);
-}
-.filter-blue-lambda {
-  filter: invert(0%) sepia(0%) saturate(1000%) hue-rotate(200deg)
-    brightness(100%) contrast(96%);
+  
 }
 
 .category-title {
@@ -606,17 +578,6 @@ section {
   position: relative;
 }
 
-.services .icon-box .icon svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.services .icon-box .icon svg path {
-  transition: 0.5s;
-  fill: #f5f5f5;
-}
-
 .services .icon-box h4 {
   font-weight: 600;
   margin: 10px 0 15px 0;
@@ -636,80 +597,8 @@ section {
 
 .services .icon-box:hover {
   border-color: #fff;
-  background: #add8e6;
+  background: #c8d1da;
   box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
-}
-
-.services .iconbox-blue i {
-  color: #47aeff;
-}
-
-.services .iconbox-blue:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-blue:hover .icon path {
-  fill: #47aeff;
-}
-
-.services .iconbox-orange i {
-  color: #ffa76e;
-}
-
-.services .iconbox-orange:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-orange:hover .icon path {
-  fill: #ffa76e;
-}
-
-.services .iconbox-pink i {
-  color: #e80368;
-}
-
-.services .iconbox-pink:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-pink:hover .icon path {
-  fill: #e80368;
-}
-
-.services .iconbox-yellow i {
-  color: #ffbb2c;
-}
-
-.services .iconbox-yellow:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-yellow:hover .icon path {
-  fill: #ffbb2c;
-}
-
-.services .iconbox-red i {
-  color: #ff5828;
-}
-
-.services .iconbox-red:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-red:hover .icon path {
-  fill: #ff5828;
-}
-
-.services .iconbox-teal i {
-  color: #11dbcf;
-}
-
-.services .iconbox-teal:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-teal:hover .icon path {
-  fill: #11dbcf;
 }
 
 /*--------------------------------------------------------------
@@ -781,7 +670,7 @@ section {
 --------------------------------------------------------------*/
 
 #footer {
-  background: #f7f8f9;
+  background: #c8d1da;
   color: #000000;
   font-size: 14px;
   padding: 30px 0;
@@ -828,7 +717,7 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #0678e3;
+  background: #0563bb;
   color: #fff;
   text-decoration: none;
 }
