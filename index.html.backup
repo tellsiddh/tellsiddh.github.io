@@ -51,10 +51,13 @@
 
     <nav id="navbar" class="navbar nav-menu">
       <ul>
-
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
         <li><a href="#about" class="nav-link scrollto active"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="#education" class="nav-link scrollto active"><i class="bx bxs-graduation"></i>
+            <span>Education</span></a></li>
+        <li><a href="#skills" class="nav-link scrollto active"><i class="bx bx-brain"></i> <span>Skills</span></a></li>
         <li><a href="#experience" class="nav-link scrollto active"><i class="bx bx-briefcase"></i>
-          <span>Experience</span></a></li>
+            <span>Experience</span></a></li>
         <li><a href="#portfolio" class="nav-link scrollto active"><i class="bx bx-collection"></i>
             <span>Projects</span></a></li>
         <li><a href="#patents-publications" class="nav-link scrollto active"><i class="bx bx-detail"></i>
@@ -67,6 +70,19 @@
     </nav><!-- .nav-menu -->
 
   </header><!-- End Header -->
+
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container">
+      <h1>Siddharth Jain</h1>
+      <p>I'm an <span style="color: #000000;"><strong>Embedded Systems Engineer</strong></span></p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/tellsiddh/" target="_blank" class="linkedin"><i
+            class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/tellsiddh" target="_blank" class="github"><i class="bi bi-github"></i></a>
+        <a href="mailto:tellsiddh@gmail.com" target="_blank" class="gmail"><i class="bx bxl-gmail"></i></a>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -174,6 +190,264 @@
       </div>
     </div>
 
+
+    <section id="education" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Education</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-12" style="display:
+                  inline-block;">
+            <div class="col-md-5 mt-5 mt-md-0 icon-box" style="padding:0px
+                      0px;padding-bottom: 5px;display: inline-block;
+                      border-radius: 0.5rem;">
+              <img src="assets/img/asu.png" class="img-fluid" alt>
+              <h4 style="text-align:center;padding: 0px 10px;">Arizona State University<br>
+              </h4>
+              <h5 style="text-align:center;padding: 0px 10px;"><a href="assets/files/ASU_Transcript.pdf" target="_blank"
+                  style="color:#ea502a"><em>&nbsp;&nbsp;&nbsp;&nbsp;Master of Science </em> <sup><i class="fa
+                        fa-external-link" style="font-size:12px"></i></sup></a></h5>
+              <h6 style="text-align:center;padding: 0px
+                          10px;color:#ea502a"><em>(Robotics and Autonomous Systems)</em>
+              </h6>
+              <p style="text-align:center;padding: 0px 10px;">August 2022 - May 2024</p>
+              <br>
+              <h6 style="text-align:center;padding: 0px 10px;">Relevant Coursework:
+              </h6>
+              <br>
+              <h6 style="text-align:center;padding: 0px 10px;">Deep Learning, Optimal Control, Reinforcement
+                Learning, Multi-Robot Systems
+              </h6>
+            </div>
+            <div class="col-md-1 mt-1 mt-md-0 icon-box" style="padding:0px
+                      0px;padding-bottom: 5px;display: inline-block;">
+            </div>
+            <div class="col-md-5 mt-5 mt-md-0 icon-box" style="padding:0px
+                      0px;padding-bottom: 5px;display: inline-block;
+                      border-radius: 0.5rem;">
+              <img src="assets/img/dj.png" class="img-fluid" alt>
+              <h4 style="text-align:center;padding: 0px 10px;">D. J. Sanghvi College of Engineering<br>
+              </h4>
+              <h5 style="text-align:center;padding: 0px 10px;"><a href="assets/files/MU Transcript - Siddharth Jain.pdf"
+                  target="_blank" style="color:#ea502a"><em>&nbsp;&nbsp;&nbsp;&nbsp;Bachelor of Engineering </em>
+                  <sup><i class="fa fa-external-link" style="font-size:12px"></i></sup></a></h5>
+              <h6 style="text-align:center;padding: 0px
+                          10px;color:#ea502a"><em>(Mechanical Engineering)</em> </h6>
+              <p style="text-align:center;padding: 0px 10px;">August 2018 - May 2022</p>
+              <br>
+              <h6 style="text-align:center;padding: 0px 10px;">Relevant Coursework:
+              </h6>
+              <br>
+              <h6 style="text-align:center;padding: 0px 10px;">
+                Robotics, Industrial Electronics, CAD CAM CAE, Database Management Systems
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+        </div>
+
+
+        <div class="skills-content">
+          <div class="category-title">
+            <h3><strong>Languages</strong></h3>
+          </div>
+          <div class="skills-box">
+            <img width="60" height="60" src="assets/vendor/extra/python.svg" alt="Python" class="">
+            <h3>Python</h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/cplusplus.png" alt="C++" class="">
+            <h3>C++</h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/matlabicon_128.png" alt="MATLAB & Simulink" class="">
+            <h3>MATLAB & Simulink</h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/embedded_c.png" alt="Embedded C" class="">
+            <h3>Embedded C</h3>
+          </div>
+          <div class="skills-box">
+            <img width="60" height="60" src="assets/vendor/extra/typescript.svg" alt="Type Script" class="">
+            <h3>Type Script</h3>
+          </div>
+          <div class="skills-box">
+            <img width="60" height="60" src="assets/vendor/extra/bash.svg" alt="Bash" class="">
+            <h3>bash</h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/sql.png" alt="SQL" class="">
+            <h3>SQL</h3>
+          </div>
+          <!-- <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/powershell.png" alt="PowerShell" class="">
+            <h3>PowerShell</h3>
+          </div> -->
+        </div>
+        <div class="skills-content">
+          <div class="category-title">
+            <h3><strong>Software Tools</strong></h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/docker.svg" alt="Docker" class="">
+            <h3>Docker</h3>
+          </div>
+          <div class="skills-box">
+            <img width="40" height="40" src="assets/vendor/extra/ros2.ico" alt="ROS2" class="">
+            <h3>ROS2</h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/reactnative.svg" alt="React Native" class="">
+            <h3>React Native</h3>
+          </div>
+          <div class="skills-box">
+            <img width="60" height="60" src="assets/vendor/extra/solidworks.png" alt="Solidworks" class="">
+            <h3>Solidworks</h3>
+          </div>
+          <!-- <div class="skills-box">
+            <img width="60" height="60" src="assets/vendor/extra/fusion360.png" alt="Fusion 360" class="">
+            <h3>Fusion 360</h3>
+          </div> -->
+          <div class="skills-box">
+            <img width="60" height="60" src="assets/vendor/extra/git.svg" alt="GIT" class="">
+            <h3>Git</h3>
+          </div>
+          <div class="skills-box">
+            <img width="80" height="80" src="assets/vendor/extra/scikit_learn.svg" alt="Scikit-Learn" class="">
+            <h3>Scikit-Learn</h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/pytorch.png" alt="PyTorch" class="">
+            <h3>PyTorch</h3>
+          </div>
+          <!-- <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/microsoft.png" alt="Microsoft Office" class="">
+            <h3>Microsoft Office</h3>
+          </div> -->
+        </div>
+        <div class="skills-content">
+          <div class="category-title">
+            <h3><strong>Hardware</strong></h3>
+          </div>
+          <div class="skills-box">
+            <img width="60" height="60" src="assets/vendor/extra/freeRTOS.png" alt="FreeRTOS" class="">
+            <h3>FreeRTOS</h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/gazebo.png" alt="Gazebo" class="">
+            <h3>Gazebo</h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/embedded linux.svg" alt="Linux" class="">
+            <h3>Embedded Linux</h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/arduino.svg" alt="Arduino IDE" class="">
+            <h3>Arduino IDE</h3>
+          </div>
+          <!-- <div class="skills-box">
+            <img width="50" height="50" src="https://img.icons8.com/color/48/tensorflow.png" alt="tensorflow">
+            <h3>Tensorflow</h3>
+          </div> -->
+        </div>
+        <div class="skills-content">
+          <div class="category-title">
+            <h3><strong>Technology</strong></h3>
+          </div>
+          <div class="skills-box">
+            <img width="60" height="60" src="assets/vendor/extra/semtech.png" alt="Semtech SX12xx" class="">
+            <h3>Semtech SX12xx</h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/esp32.png" alt="ESP32" class="">
+            <h3>ESP32</h3>
+          </div>
+          <div class="skills-box">
+            <img width="70" height="70" src="assets/vendor/extra/arm.png" alt="Arm Cortex-M" class="">
+            <h3>Arm Cortex-M</h3>
+          </div>
+          <div class="skills-box">
+            <img width="60" height="60" src="assets/vendor/extra/Atmega.jpg" alt="Atmega" class="">
+            <h3>ATmega</h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/raspberrypi.svg" alt="Raspberry Pi" class="">
+            <h3>Raspberry Pi</h3>
+          </div>
+        </div>
+        <div class="skills-content">
+          <div class="category-title">
+            <h3><strong>Protocols</strong></h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/SPI.png" alt="SPI / I2C" class="">
+            <h3>SPI / I2C</h3>
+          </div>
+          <!-- <div class="skills-box">
+            <img width="60" height="60" src="assets/vendor/extra/i2c.jpg" alt="I2C" class="">
+            <h3>I2C</h3>
+          </div> -->
+          <div class="skills-box">
+            <img width="90" height="90" src="assets/vendor/extra/CANBus.jpg" alt="CAN Bus" class="">
+            <h3>CAN Bus</h3>
+          </div>
+          <div class="skills-box">
+            <img width="40" height="40" src="assets/vendor/extra/MQTT.png" alt="MQTT" class="">
+            <h3>MQTT</h3>
+          </div>
+          <!-- <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/USB.png" alt="UART" class="">
+            <h3>UART</h3>
+          </div> -->
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/wifi.svg" alt="Wi-Fi" class="">
+            <h3>Wi-Fi</h3>
+          </div>
+          <div class="skills-box">
+            <img width="80" height="80" src="assets/vendor/extra/LoRa.png" alt="LoRa" class="">
+            <h3>LoRa</h3>
+          </div>
+          <div class="skills-box">
+            <img width="50" height="50" src="assets/vendor/extra/bluetooth.svg" alt="BLE" class="">
+            <h3>BLE</h3>
+          </div>
+        </div>
+        <div class="skills-content">
+          <div class="category-title">
+            <h3><strong>AWS</strong></h3>
+          </div>
+          <div class="skills-box">
+            <img src="assets/vendor/extra/iotcore.svg" alt="IoT Core" class="aws-skill-icon">
+            <h3>IoT Core</h3>
+          </div>
+          <div class="skills-box">
+            <img src="assets/vendor/aws/lambda2.svg" alt="Lambda" class="aws-skill-icon">
+            <h3>Lambda</h3>
+          </div>
+          <div class="skills-box">
+            <img src="assets/vendor/aws/timestream.svg" alt="Timestream" class="aws-skill-icon">
+            <h3>Timestream</h3>
+          </div>
+          <div class="skills-box">
+            <img src="assets/vendor/aws/dynamoDB.svg" alt="DynamoDB" class="aws-skill-icon">
+            <h3>DynamoDB</h3>
+          </div>
+          <div class="skills-box">
+            <img src="assets/vendor/aws/s3.svg" alt="S3 Buckets" class="aws-skill-icon">
+            <h3>S3 Buckets</h3>
+          </div>
+
+        </div>
+    </section>
 
     <section id="experience" class="services">
       <div class="container">
