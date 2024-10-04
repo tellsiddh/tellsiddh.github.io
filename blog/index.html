@@ -15,6 +15,7 @@
             <h3>Office Holders</h3>
             <ul>
                 <li><a href="#" onclick="fetchTable('Supreme Court Judges')">Supreme Court Judges</a></li>
+                <li><a href="#" onclick="fetchTable('Indian Chief Ministers')">Indian Chief Ministers</a></li>
                 <li><a href="#" onclick="fetchTable('Constitutional Office-Holders')">Constitutional Office-Holders</a></li>
                 <li><a href="#" onclick="fetchTable('Cabinet Office-Holders')">Cabinet Office-Holders</a></li>
                 <li><a href="#" onclick="fetchTable('Important office holders')">Important Office Holders</a></li>
@@ -38,6 +39,8 @@
             // Change URL based on section
             if (section === 'Supreme Court Judges') {
                 url = `https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=List_of_sitting_judges_of_the_Supreme_Court_of_India&prop=text&formatversion=2`;
+            } else if (section === 'Indian Chief Ministers') {
+                url = `https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=List_of_current_Indian_chief_ministers&prop=text&formatversion=2`;
             } else {
                 url = `https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=List_of_office-holders_in_the_Government_of_India&prop=text&formatversion=2`;
             }
@@ -57,6 +60,9 @@
                 let table;
                 if (section === 'Supreme Court Judges') {
                     // Find the first table that lists the Supreme Court Judges
+                    table = tempDiv.querySelector('table.wikitable');
+                } else if (section === 'Indian Chief Ministers') {
+                    // Find the first table that lists the Chief Ministers
                     table = tempDiv.querySelector('table.wikitable');
                 } else {
                     switch (section) {
