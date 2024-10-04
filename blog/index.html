@@ -14,6 +14,7 @@
         <aside class="sidebar">
             <h3>Office Holders</h3>
             <ul>
+                <li><a href="#" onclick="fetchTable('Supreme Court Judges')">Supreme Court Judges</a></li>
                 <li><a href="#" onclick="fetchTable('Constitutional Office-Holders')">Constitutional Office-Holders</a></li>
                 <li><a href="#" onclick="fetchTable('Cabinet Office-Holders')">Cabinet Office-Holders</a></li>
                 <li><a href="#" onclick="fetchTable('Important office holders')">Important Office Holders</a></li>
@@ -32,7 +33,14 @@
 
     <script>
         async function fetchTable(section) {
-            const url = `https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=List_of_office-holders_in_the_Government_of_India&prop=text&formatversion=2`;
+            let url;
+
+            // Change URL based on section
+            if (section === 'Supreme Court Judges') {
+                url = `https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=List_of_sitting_judges_of_the_Supreme_Court_of_India&prop=text&formatversion=2`;
+            } else {
+                url = `https://en.wikipedia.org/w/api.php?action=parse&format=json&origin=*&page=List_of_office-holders_in_the_Government_of_India&prop=text&formatversion=2`;
+            }
 
             try {
                 const response = await fetch(url);
@@ -47,27 +55,32 @@
 
                 // Find the specific table based on the section
                 let table;
-                switch (section) {
-                    case 'Constitutional Office-Holders':
-                        table = tempDiv.querySelectorAll('table')[0]; // First table for Constitutional Office-Holders
-                        break;
-                    case 'Cabinet Office-Holders':
-                        table = tempDiv.querySelectorAll('table')[1]; // Second table for Cabinet Office-Holders
-                        break;
-                    case 'Important office holders':
-                        table = tempDiv.querySelectorAll('table')[2]; // Third table for Important office holders
-                        break;
-                    case 'Heads of commissions':
-                        table = tempDiv.querySelectorAll('table')[3]; // Fourth table for Heads of commissions
-                        break;
-                    case 'Heads of financial bodies':
-                        table = tempDiv.querySelectorAll('table')[4]; // Fifth table for Heads of financial bodies
-                        break;
-                    case 'Defence and Security':
-                        table = tempDiv.querySelectorAll('table')[5]; // Sixth table for Defence and Security
-                        break;
-                    default:
-                        table = 'Table not found!';
+                if (section === 'Supreme Court Judges') {
+                    // Find the first table that lists the Supreme Court Judges
+                    table = tempDiv.querySelector('table.wikitable');
+                } else {
+                    switch (section) {
+                        case 'Constitutional Office-Holders':
+                            table = tempDiv.querySelectorAll('table')[1]; // First table for Constitutional Office-Holders
+                            break;
+                        case 'Cabinet Office-Holders':
+                            table = tempDiv.querySelectorAll('table')[2]; // Second table for Cabinet Office-Holders
+                            break;
+                        case 'Important office holders':
+                            table = tempDiv.querySelectorAll('table')[3]; // Third table for Important office holders
+                            break;
+                        case 'Heads of commissions':
+                            table = tempDiv.querySelectorAll('table')[4]; // Fourth table for Heads of commissions
+                            break;
+                        case 'Heads of financial bodies':
+                            table = tempDiv.querySelectorAll('table')[5]; // Fifth table for Heads of financial bodies
+                            break;
+                        case 'Defence and Security':
+                            table = tempDiv.querySelectorAll('table')[6]; // Sixth table for Defence and Security
+                            break;
+                        default:
+                            table = 'Table not found!';
+                    }
                 }
 
                 // Display the table in the main content area
