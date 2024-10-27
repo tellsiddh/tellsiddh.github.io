@@ -730,3 +730,119 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+  }
+
+  a {
+    color: #add8e6;
+  }
+
+  a:hover {
+    color: #add8e6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+  }
+
+  .back-to-top {
+    background-color: #333333;
+    color: #add8e6;
+  }
+
+  .back-to-top:hover {
+    background-color: #add8e6;
+    color: #1c1c1c;
+  }
+
+  #header {
+    background-color: #2a2a2a;
+    color: #ffffff;
+  }
+
+  .nav-menu a {
+    color: #e0e0e0;
+    background-color: #000000;
+  }
+
+  .nav-menu a:hover,
+  .nav-menu .active {
+    background-color: #0563bb;
+    color: #ffffff;
+  }
+
+  #hero h1 {
+    color: #e0e0e0;
+  }
+
+  #hero p {
+    color: #e0e0e0;
+  }
+
+  .section-title h2 {
+    color: #ffffff;
+  }
+
+  .about .content h3,
+  .about .content p,
+  .about .content ul li {
+    color: #e0e0e0;
+  }
+
+  .services .icon-box {
+    background-color: #333333;
+    color: #e0e0e0;
+  }
+
+  .services .icon-box:hover {
+    background-color: #444444;
+  }
+
+  .contact .info i {
+    background-color: #333333;
+    color: #add8e6;
+  }
+
+  .contact .info h4,
+  .contact .info p {
+    color: #e0e0e0;
+  }
+
+  #footer {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+  }
+
+  #footer h3 {
+    color: #ffffff;
+  }
+
+  #footer .social-links a {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  #footer .social-links a:hover {
+    background-color: #add8e6;
+    color: #1c1c1c;
+  }
+
+  .skills-box {
+    background-color: #333333;
+    color: #e0e0e0;
+  }
+
+  .skills-box:hover {
+    background-color: #444444;
+  }
+
+  .category-title {
+    background-color: #333333;
+    color: #e0e0e0;
+  }
+}
