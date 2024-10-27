@@ -1,66 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iris News</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>IRIS News</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 </head>
+
 <body>
+
+    <!-- Header -->
     <header>
-        <div class="logo">
-            <h1>Iris News</h1>
+        <div class="top-bar">
+            <p>Sunday, October 27, 2024 | Today’s Paper</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">World</a></li>
-                <li><a href="#">Politics</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Culture</a></li>
-                <li><a href="#">Opinion</a></li>
-                <li><a href="#">Tech</a></li>
-            </ul>
-        </nav>
+
+        <div class="logo">
+            <h1><a href="index.html">IRIS News</a></h1>
+        </div>
+
+        <div class="nav-wrapper">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Ipsum</a></li>
+                    <li><a href="#">Dolor</a></li>
+                    <li><a href="#">Sit Amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">Adipiscing</a></li>
+                    <li><a href="#">Elit</a></li>
+                    <li><a href="#">Sed</a></li>
+                    <li><a href="#">Do</a></li>
+                    <li><a href="#">Eiusmod</a></li>
+                    <li><a href="#">Tempor</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="subscribe">Subscribe</button>
+                <button class="login">Login</button>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        <!-- Featured Article -->
-        <section class="featured">
-            <img src="https://via.placeholder.com/800x400" alt="Featured Image">
-            <h2>Breaking News: Major Event Shakes the World</h2>
-            <p class="author">By Jane Doe | October 5, 2024</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-            <a href="article1.html" class="read-more">Read More</a>
+    <!-- Top Story Section -->
+    <section class="top-story-carousel">
+        <div class="carousel-container">
+            <div class="carousel-item active">
+                <figure>
+                    <img src="placeholder.jpg" alt="Lorem ipsum">
+                    <figcaption>
+                        <h2><a href="article.html">Lorem Ipsum Dolor Sit Amet</a></h2>
+                        <p class="author">By John Doe</p>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main News Section -->
+    <main class="main-content">
+        <section class="news-section">
+            <div class="news-grid">
+                <article class="news-item">
+                    <h3><a href="article.html">Lorem Ipsum in Dolor Amet</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempor orci nec odio malesuada...</p>
+                    <p class="author">5 MIN READ</p>
+                </article>
+                <article class="news-item">
+                    <h3><a href="article.html">Consectetur Adipiscing Elit Sed Do Eiusmod</a></h3>
+                    <p>Suspendisse potenti. Phasellus eget lacus sed purus faucibus vehicula ac id sapien...</p>
+                    <p class="author">10 MIN READ</p>
+                </article>
+            </div>
         </section>
 
-        <!-- News Articles Section -->
-        <section class="news-articles">
-            <article>
-                <h3>Political Drama Unfolds in Washington</h3>
-                <p class="author">By John Smith | October 5, 2024</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus ut libero at consequat...</p>
-                <a href="article2.html" class="read-more">Read More</a>
-            </article>
-
-            <article>
-                <h3>Economic Uncertainty Looms in Global Markets</h3>
-                <p class="author">By Alice Cooper | October 5, 2024</p>
-                <p>Quisque ultricies lacus ut justo cursus tincidunt. Aenean scelerisque dui sit amet dui lacinia malesuada...</p>
-                <a href="article3.html" class="read-more">Read More</a>
-            </article>
-
-            <article>
-                <h3>Breakthrough in Medical Research Saves Lives</h3>
-                <p class="author">By Sarah Lee | October 5, 2024</p>
-                <p>Nulla vehicula purus ut mauris hendrerit, at vestibulum odio facilisis. Aliquam erat volutpat...</p>
-                <a href="article4.html" class="read-more">Read More</a>
-            </article>
+        <!-- Poll Section -->
+        <section class="poll-section">
+            <h3>Lorem Ipsum Poll</h3>
+            <div class="poll">
+                <div class="poll-question">
+                    <p>Lorem ipsum...</p>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 50%;">50% - Lorem</div>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 40%;">40% - Ipsum</div>
+                    </div>
+                </div>
+                <div class="poll-question">
+                    <p>Dolor sit amet...</p>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 70%;">70% - Dolor</div>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 30%;">30% - Amet</div>
+                    </div>
+                </div>
+            </div>
         </section>
-    </div>
 
+        <!-- Opinion Section -->
+        <section class="opinion-section">
+            <h3>Opinion</h3>
+            <div class="opinion-item">
+                <a href="article.html">
+                    <img src="placeholder.jpg" alt="Lorem ipsum">
+                    <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Iris News. All rights reserved.</p>
+        <p>© 2024 Lorem Ipsum News. All rights reserved.</p>
     </footer>
+
 </body>
+
 </html>
