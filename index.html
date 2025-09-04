@@ -53,6 +53,9 @@
       }
     }
 
+    main {
+      padding-top: var(--header-h);
+    }
 
     img,
     svg {
@@ -66,6 +69,7 @@
 
     /* ========== Design Tokens ========== */
     :root {
+      --header-h: 128px;
       /* Light (default) */
       --bg: #ffffff;
       --ink: #0b0f17;
@@ -155,6 +159,7 @@
       font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
       font-size: var(--fs-md);
       line-height: 1.55;
+      overflow-x: hidden;
     }
 
     a {
@@ -213,13 +218,17 @@
 
     /* ========== Nav ========== */
     .nav {
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 50;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      /* above drawer */
       backdrop-filter: saturate(150%) blur(10px);
       background: var(--panel);
       border-bottom: 1px solid var(--border);
     }
+
 
     .nav .inner {
       display: flex;
