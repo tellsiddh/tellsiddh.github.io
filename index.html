@@ -630,6 +630,69 @@
         text-decoration: underline
       }
     }
+
+    /* === Mobile Drawer Nav === */
+    .mobile-drawer-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100vh;
+      background: var(--bg);
+      border-left: 1px solid var(--border);
+      box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+      transition: right 0.3s ease-in-out;
+      padding: 80px 24px 24px;
+      /* leave room for top bar */
+      display: flex;
+      flex-direction: column;
+      z-index: 999;
+    }
+
+    .mobile-drawer-nav.show {
+      right: 0;
+    }
+
+    /* Links inside drawer */
+    .mobile-drawer-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .mobile-drawer-nav a {
+      display: block;
+      font-size: var(--fs-lg);
+      color: var(--ink);
+      padding: 10px 14px;
+      border-radius: 10px;
+      transition: background 0.2s ease;
+    }
+
+    .mobile-drawer-nav a:hover,
+    .mobile-drawer-nav a[aria-current="page"] {
+      background: var(--elev);
+      font-weight: 600;
+    }
+
+    /* Hamburger button shown on small screens only */
+    .mobile-nav-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .mobile-nav-toggle {
+        display: inline-flex;
+        margin-left: auto;
+      }
+    }
   </style>
 
   <!-- Structured data -->
@@ -658,7 +721,9 @@
         <span class="avatar" aria-hidden="true">SJ</span>
         <span>Siddharth Rohit Jain</span>
       </a>
-      <nav aria-label="Primary">
+
+      <!-- Desktop nav -->
+      <nav class="desktop-nav" aria-label="Primary">
         <ul role="list">
           <li><a class="peek" href="#work">Work</a></li>
           <li><a class="peek" href="#projects">Projects</a></li>
@@ -670,12 +735,33 @@
           <li><a class="peek" href="assets/files/Siddharth Jain.pdf" target="_blank">Resume</a></li>
         </ul>
       </nav>
+
       <button id="themeToggle" class="btn" aria-label="Toggle dark mode">
         <i class="bi bi-moon-fill" aria-hidden="true"></i>
       </button>
 
+      <!-- Hamburger toggle -->
+      <button id="menuToggle" class="btn mobile-nav-toggle" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+
     </div>
+
+    <!-- Mobile nav drawer -->
+    <nav id="primaryNav" class="mobile-drawer-nav" aria-label="Primary">
+      <ul role="list">
+        <li><a class="peek" href="#work">Work</a></li>
+        <li><a class="peek" href="#projects">Projects</a></li>
+        <li><a class="peek" href="#skills">Tech</a></li>
+        <li><a class="peek" href="https://blog.tellsiddh.com/" target="_blank">Blog</a></li>
+        <li><a class="peek" href="#education">Education</a></li>
+        <li><a class="peek" href="#extras">Leadership</a></li>
+        <li><a class="peek" href="#contact">Contact</a></li>
+        <li><a class="peek" href="assets/files/Siddharth Jain.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </nav>
   </header>
+
 
   <main id="main">
     <!-- HERO -->
@@ -1007,17 +1093,22 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Mark current section in nav for a11y
-    const navLinks = document.querySelectorAll('header nav a');
+    // Highlight current section in both desktop and mobile navs
+    const navLinks = document.querySelectorAll('nav a');
     const sections = [...document.querySelectorAll('main section[id]')];
-    const io = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
           const id = entry.target.id;
-          navLinks.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + id ? 'page' : 'false'));
+          navLinks.forEach(link => {
+            link.setAttribute('aria-current', link.getAttribute('href') === `#${id}` ? 'page' : 'false');
+          });
         }
       }
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0.01 });
-    sections.forEach(sec => io.observe(sec));
+
+    sections.forEach(section => observer.observe(section));
+
 
     // Project filters (keyboard & a11y friendly)
     // Project filters (keyboard & a11y friendly)
@@ -1109,6 +1200,53 @@
       // next frame ensures DOM has applied the class/styles
       requestAnimationFrame(setHeaderOffset);
     });
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('primaryNav');
+
+    menuToggle?.addEventListener('click', () => {
+      mobileNav.classList.toggle('show');
+
+      const icon = menuToggle.querySelector('i');
+      if (mobileNav.classList.contains('show')) {
+        icon.classList.remove('bi-list');
+        icon.classList.add('bi-x');
+      } else {
+        icon.classList.remove('bi-x');
+        icon.classList.add('bi-list');
+      }
+    });
+    document.querySelectorAll('#primaryNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('show');
+        menuToggle.querySelector('i').classList.remove('bi-x');
+        menuToggle.querySelector('i').classList.add('bi-list');
+      });
+    });
+
+    // Close mobile nav when clicking outside
+    document.addEventListener('click', function (e) {
+      const isClickInsideNav = mobileNav.contains(e.target);
+      const isClickOnToggle = menuToggle.contains(e.target);
+
+      if (!isClickInsideNav && !isClickOnToggle && mobileNav.classList.contains('show')) {
+        mobileNav.classList.remove('show');
+
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('bi-x');
+        icon.classList.add('bi-list');
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mobileNav.classList.contains('show')) {
+        mobileNav.classList.remove('show');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('bi-x');
+        icon.classList.add('bi-list');
+      }
+    });
+
 
   </script>
 </body>
