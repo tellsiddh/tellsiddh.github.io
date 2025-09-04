@@ -2,645 +2,1115 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Siddharth Rohit Jain — ML/AI • Cloud • DevOps</title>
+  <meta name="description"
+    content="Portfolio of software engineering work in ML/AI apps, AWS cloud‑native infrastructure, CI/CD, observability, and scalable systems." />
+  <meta id="themeColor" name="theme-color" content="#ffffff" />
 
-  <title>Siddharth Jain - Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <link rel="canonical" href="https://tellsiddh.com/" />
+  <meta name="theme-color" content="#0b0f17" />
 
-  <link href="assets/img/favicon.png" rel="icon">
-  <!-- Google Fonts -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Siddharth Rohit Jain — Portfolio" />
+  <meta property="og:description" content="ML/AI apps • AWS cloud • CI/CD • observability • scalable systems" />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:image" content="https://tellsiddh.com/og-image.jpg" /> -->
+
+  <!-- Fonts + Icons (performance) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
     rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <style>
+    /* ========== Reset ========== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box
+    }
 
-  <!-- Additional CSS Files -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    * {
+      margin: 0
+    }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    html:focus-within {
+      scroll-behavior: smooth
+    }
 
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Updated: Jun 13 2023 with Bootstrap v5.3.0
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%
+    }
+
+    button {
+      font: inherit
+    }
+
+    /* ========== Design Tokens ========== */
+    :root {
+      /* Light (default) */
+      --bg: #ffffff;
+      --ink: #0b0f17;
+      --muted: #4a5568;
+
+      /* Brand */
+      --brand: #3d7fd5;
+      --accent: #66b3ff;
+
+      /* Surfaces */
+      --panel: #f5f7fa;
+      /* nav / sticky / panels */
+      --card: #f9fbfd;
+      /* cards */
+      --elev: rgba(0, 0, 0, .06);
+      /* hover overlay */
+      --border: rgba(0, 0, 0, .12);
+      --soft: rgba(0, 0, 0, .04);
+
+      /* Effects */
+      --ring: 0 0 0 3px rgba(61, 127, 213, .35);
+      --shadow: 0 6px 20px rgba(0, 0, 0, .10);
+
+      /* Radius / spacing */
+      --radius: 16px;
+      --rsm: 12px;
+
+      /* Typography scale */
+      --fs-xs: 12px;
+      --fs-sm: 14px;
+      --fs-md: 16px;
+      --fs-lg: 18px;
+      --fs-xl: 22px;
+      --fs-2xl: 28px;
+      --fs-3xl: clamp(28px, 4.2vw, 48px);
+
+      /* Layout widths */
+      --container: 1160px;
+
+      /* Breakpoints */
+      /* xs (0–479), sm (>=480), md (>=640), lg (>=780), xl (>=1024), 2xl (>=1280) */
+    }
+
+    :root {
+      --header-h: 128px;
+    }
+
+    /* sensible default */
+    main section[id] {
+      scroll-margin-top: calc(var(--header-h) + 20px);
+    }
+
+    /* “a bit down” */
+
+    body.dark {
+      /* Dark */
+      --bg: #0b0f17;
+      --ink: #e9f1ff;
+      --muted: #a9b4c7;
+
+      --brand: #66b3ff;
+      --accent: #90f1ff;
+
+      --panel: rgba(11, 15, 23, .75);
+      --card: #101a2e;
+      --elev: rgba(255, 255, 255, .06);
+      --border: rgba(255, 255, 255, .12);
+      --soft: rgba(255, 255, 255, .06);
+
+      --ring: 0 0 0 3px rgba(102, 179, 255, .35);
+      --shadow: 0 12px 30px rgba(0, 0, 0, .35);
+    }
+
+    /* Optional: add the original dark gradients only in dark mode */
+    body.dark {
+      background:
+        radial-gradient(1200px 700px at 80% -10%, rgba(102, 179, 255, .12), transparent 60%),
+        radial-gradient(900px 600px at -10% 10%, rgba(144, 241, 255, .10), transparent 55%),
+        var(--bg);
+    }
+
+    /* ========== Base ========== */
+    html,
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+      font-size: var(--fs-md);
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--brand);
+      text-decoration: none
+    }
+
+    a:hover {
+      color: #9dd0ff
+    }
+
+    a:focus-visible {
+      outline: none;
+      box-shadow: var(--ring);
+      border-radius: 10px
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    @media (min-width:480px) {
+      .container {
+        padding: 28px 18px;
+      }
+    }
+
+    @media (min-width:780px) {
+      .container {
+        padding: 28px 20px;
+      }
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden
+    }
+
+    .skip-link:focus {
+      left: 20px;
+      top: 12px;
+      width: auto;
+      height: auto;
+      padding: 10px 14px;
+      background: #061325;
+      color: #cfe7ff;
+      border-radius: 10px;
+      z-index: 999
+    }
+
+    /* ========== Nav ========== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: saturate(150%) blur(10px);
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-weight: 800;
+      letter-spacing: .2px
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--brand), var(--accent));
+      color: #06233c;
+      font-weight: 800
+    }
+
+    .nav ul {
+      display: flex;
+      list-style: none;
+      gap: 4px;
+      margin: 0;
+      padding: 0
+    }
+
+    .nav a {
+      color: var(--ink);
+      padding: 10px 10px;
+      border-radius: 10px
+    }
+
+    .nav a:hover,
+    .nav a[aria-current="page"] {
+      background: var(--elev)
+    }
+
+    /* Collapse nav spacing a bit on very small screens */
+    @media (max-width:479.98px) {
+      .nav .inner {
+        gap: 8px
+      }
+
+      .nav a {
+        padding: 8px 8px
+      }
+    }
+
+    /* ========== Hero ========== */
+    .hero {
+      padding: 48px 0 20px
+    }
+
+    @media (min-width:640px) {
+      .hero {
+        padding: 60px 0 24px
+      }
+    }
+
+    h1 {
+      font-size: var(--fs-3xl);
+      line-height: 1.1;
+      margin: 12px 0
+    }
+
+    .sub {
+      color: var(--muted);
+      max-width: 850px
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: color-mix(in oklab, var(--brand) 18%, transparent);
+      color: color-mix(in oklab, var(--brand) 85%, var(--ink));
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase
+    }
+
+    .cta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px
+    }
+
+    /* ========== Buttons ========== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.00));
+      color: var(--ink);
+      box-shadow: var(--shadow)
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      background: var(--elev)
+    }
+
+    .btn:focus-visible {
+      outline: none;
+      box-shadow: var(--ring)
+    }
+
+    .btn.primary {
+      border: none;
+      color: #061325;
+      background: linear-gradient(180deg, var(--accent), var(--brand))
+    }
+
+    body.dark .btn.primary {
+      color: #061325
+    }
+
+    #themeToggle {
+      white-space: nowrap
+    }
+
+    /* ========== Grid Utilities ========== */
+    .grid {
+      display: grid;
+      gap: 18px
+    }
+
+    .grid-2 {
+      grid-template-columns: 1fr
+    }
+
+    .grid-3 {
+      grid-template-columns: 1fr
+    }
+
+    .grid-4 {
+      grid-template-columns: 1fr
+    }
+
+    /* md */
+    @media (min-width:640px) {
+      .grid-2 {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    /* lg */
+    @media (min-width:780px) {
+      .grid-2 {
+        grid-template-columns: 1.2fr .8fr
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .grid-4 {
+        grid-template-columns: repeat(4, 1fr)
+      }
+    }
+
+    /* ========== Surfaces ========== */
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    /* ========== Sections & Headings ========== */
+    .section {
+      padding: 28px 0
+    }
+
+    .section h2 {
+      font-size: var(--fs-xl);
+      margin: 0 0 12px
+    }
+
+    /* ========== KPIs ========== */
+    .kpis {
+      display: grid;
+      gap: 12px
+    }
+
+    @media (min-width:760px) {
+      .kpis {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+
+    .kpi {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 16px;
+      border-radius: var(--rsm);
+      background: var(--soft);
+      border: 1px solid var(--border)
+    }
+
+    .kpi strong {
+      font-size: 22px
+    }
+
+    /* ========== Chips & Filters ========== */
+    .chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap
+    }
+
+    .chip {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--soft);
+      font-size: 13px;
+      color: var(--ink)
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px
+    }
+
+    .filter {
+      cursor: pointer;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--ink)
+    }
+
+    .filter[aria-pressed="true"] {
+      background: color-mix(in oklab, var(--brand) 16%, transparent);
+      border-color: color-mix(in oklab, var(--brand) 40%, var(--border));
+    }
+
+    /* ========== Projects ========== */
+    .project {
+      display: grid;
+      gap: 10px
+    }
+
+    .project .links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    /* ========== Timeline ========== */
+    .timeline {
+      position: relative;
+      padding-left: 22px
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, color-mix(in oklab, var(--brand) 35%, transparent), transparent)
+    }
+
+    .tl {
+      position: relative;
+      margin: 0 0 16px
+    }
+
+    .tl::before {
+      content: "";
+      position: absolute;
+      left: -15px;
+      top: 10px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand), var(--accent))
+    }
+
+    .tlhead {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .worklist {
+      margin: 8px 0 0 18px
+    }
+
+    /* ========== Contact Grid ========== */
+    .contact-grid {
+      display: grid;
+      gap: 12px
+    }
+
+    @media (min-width:600px) {
+      .contact-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media (min-width:720px) {
+      .contact-grid {
+        grid-template-columns: repeat(5, 1fr)
+      }
+    }
+
+    /* ========== Typography Helpers ========== */
+    .muted {
+      color: var(--muted)
+    }
+
+    .mono {
+      font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace
+    }
+
+    /* ========== Footer ========== */
+    .footer {
+      padding: 40px 0 60px;
+      margin-top: 36px;
+      border-top: 1px solid var(--border)
+    }
+
+    /* ========== Small-screen Tweaks ========== */
+    @media (max-width:479.98px) {
+      h1 {
+        font-size: clamp(24px, 8vw, 34px)
+      }
+
+      .btn {
+        padding: 10px 14px
+      }
+
+      .pill {
+        font-size: 11px
+      }
+
+      .section {
+        padding: 22px 0
+      }
+
+      .worklist {
+        margin-left: 14px
+      }
+    }
+
+    /* ========== Focus / A11y (no motion) ========== */
+    @media (prefers-reduced-motion:reduce) {
+      .btn:hover {
+        transform: none
+      }
+    }
+
+    /* ========== Print (clean) ========== */
+    @media print {
+
+      .nav,
+      .cta,
+      .filters,
+      #themeToggle {
+        display: none !important
+      }
+
+      .container {
+        max-width: none;
+        padding: 0
+      }
+
+      .card,
+      .panel,
+      .kpi {
+        box-shadow: none
+      }
+
+      a {
+        color: inherit;
+        text-decoration: underline
+      }
+    }
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Siddharth Rohit Jain",
+    "url":"https://tellsiddh.com/",
+    "jobTitle":"ML/AI • Cloud • DevOps Engineer",
+    "sameAs":[
+      "https://github.com/tellsiddh",
+      "https://www.linkedin.com/in/tellsiddh/"
+    ]
+  }
+  </script>
 </head>
 
-
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex flex-column justify-content-center">
+  <!-- NAV -->
+  <header class="nav" role="banner">
+    <div class="container inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="avatar" aria-hidden="true">SJ</span>
+        <span>Siddharth Rohit Jain</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul role="list">
+          <li><a class="peek" href="#work">Work</a></li>
+          <li><a class="peek" href="#projects">Projects</a></li>
+          <li><a class="peek" href="#skills">Tech</a></li>
+          <li><a class="peek" href="https://blog.tellsiddh.com/" target="_blank">Blog</a></li>
+          <li><a class="peek" href="#education">Education</a></li>
+          <li><a class="peek" href="#extras">Leadership</a></li>
+          <li><a class="peek" href="#contact">Contact</a></li>
+          <li><a class="peek" href="assets/files/Siddharth Jain.pdf" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="btn" aria-label="Toggle dark mode">
+        <i class="bi bi-moon-fill" aria-hidden="true"></i>
+      </button>
 
-    <nav id="navbar" class="navbar nav-menu">
-      <ul>
-
-        <li><a href="#about" class="nav-link scrollto active"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#experience" class="nav-link scrollto active"><i class="bx bx-briefcase"></i>
-          <span>Experience</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto active"><i class="bx bx-collection"></i>
-            <span>Projects</span></a></li>
-        <li><a href="#patents-publications" class="nav-link scrollto active"><i class="bx bx-detail"></i>
-            <span>Publications</span></a></li>
-        <li><a href="#contact" class="nav-link scrollto active"><i class="bx bx-envelope"></i> <span>Contact</span></a>
-        </li>
-        <li><a href="assets/files/Siddharth Jain.pdf" class="nav-link scrollto" target="_blank"><i
-              class="bx bx-file-blank"></i> <span>Resume Download</span></a></li>
-      </ul>
-    </nav><!-- .nav-menu -->
-
-  </header><!-- End Header -->
-
-
+    </div>
+  </header>
 
   <main id="main">
-
-    <section id="about" class="about">
-      <div class="container">
-        <div class="section-title">
-          <h2>Siddharth Rohit Jain</h2>
-          <p>A Master's student in Robotics and Autonomous Systems, focusing on Bio-Inspired Robotics. Expertise in embedded systems, ROS, and AI pipeline development. I am adept at crafting innovative solutions for complex challenges in robotics, AI, and autonomous systems.
-
-          </p>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 d-flex justify-content-center">
-            <img src="assets/img/image_self.jpg" class="img-fluid profile-pic" alt>
-          </div>
-
-
-          <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3 style="color: #0563bb;">Embedded Systems, Robotics &amp; Controls Enthusiast
-            </h3>
-            <br>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class='bx bxs-graduation'></i>
-                    <strong>Highest Education:</strong> Master of Science
-                  </li>
-                  <li><i class='bx bxs-book'></i>
-                    <strong>Majors:</strong> Robotics and Autonomous Systems
-                  </li>
-                </ul><br>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bx bx-current-location"></i>
-                    <strong>City:</strong> Tempe, AZ
-                  </li>
-                  <li><i class='bx bxl-gmail'></i>
-                    <strong>Email:</strong><a href="mailto:tellsiddh@gmail.com" style="color:
-                                          #0563bb;"> tellsiddh@gmail.com</a>
-                  </li>
-                </ul><br>
-              </div>
-            </div>
-            <p>
-              <i class="bx bx-circle"></i> Expertise in embedded design using NRF BLE, ESP32, and Raspberry Pi,
-              emphasizing real-time control and integration.<br><br>
-
-              <i class="bx bx-circle"></i> Versed in software tools like Docker and Arduino IDE, and hardware design
-              with Altium. Adept in software-hardware synergy for control systems.<br><br>
-
-              <i class="bx bx-circle"></i> Strong foundation in protocols such as SPI, I2C, CAN Bus, and RF integrations
-              like LoRa and BLE for optimal communication in robotics.<br><br>
-
-              <i class="bx bx-circle"></i> Skilled in cloud integration for embedded systems using AWS services,
-              facilitating scalable and efficient control & robotic solutions.<br>
-
-
-              <!-- <i class="bx bx-circle"></i> Proficient in designing, manufacturing, and programming embedded systems using a diverse range of hardware, including Semtech SX12xx, NRF BLE, ESP32, SAMD21, Arm Cortex-M microcontrollers, ATmega, and Raspberry Pi.
-
-<i class="bx bx-circle"></i> Skilled in utilizing software technologies such as Docker, ROS2, Solidworks, Autodesk Fusion 360, Arduino IDE, Altium, and Microsoft Office to develop innovative embedded systems solutions.
-
-<i class="bx bx-circle"></i> Extensive experience in conducting research and implementing projects in the field of robotics and autonomous systems, demonstrating expertise in areas such as reinforcement learning, deep learning, optimal control, and modeling and control of robots.
-
-<i class="bx bx-circle"></i> Proficient in working with protocols such as SPI, I2C, CAN Bus, UART, and RF integration (ZigBee, LoRa, Wi-Fi, BLE), enabling seamless communication and integration of components in embedded systems.
-
-<i class="bx bx-circle"></i> Skilled in utilizing AWS services such as IoT Core, Lambda, Timestream, and DynamoDB, leveraging the power of cloud computing for scalable and efficient embedded systems solutions.
-
-<i class="bx bx-circle"></i> Excellent problem-solving skills and attention to detail, ensuring the quality and reliability of embedded systems through thorough testing, data analysis, and optimization. -->
-
-            </p>
-          </div>
-        </div>
+    <!-- HERO -->
+    <section id="top" class="container hero">
+      <span class="pill" aria-label="Areas: ML, AI, Cloud, DevOps"><i class="bi bi-cpu" aria-hidden="true"></i> ML/AI •
+        Cloud • DevOps</span>
+      <h1>Shipping scalable AI systems, cloud‑native infra, and seriously fast CI/CD.</h1>
+      <p class="sub">
+        I build production‑grade ML/AI applications, AWS‑first architectures, and developer tooling that make teams
+        faster.
+        Strong in observability, automation, and cost‑efficient design.
+      </p>
+      <div class="cta" role="group" aria-label="Primary calls to action">
+        <a class="btn primary" href="#projects"><i class="bi bi-diagram-3" aria-hidden="true"></i> Explore projects</a>
+        <a class="btn" href="mailto:tellsiddh@gmail.com" rel="noopener noreferrer"><i class="bi bi-send"
+            aria-hidden="true"></i> Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/tellsiddh/" target="_blank" rel="noopener noreferrer"><i
+            class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn</a>
+        <a class="btn" href="https://github.com/tellsiddh" target="_blank" rel="noopener noreferrer"><i
+            class="bi bi-github" aria-hidden="true"></i> GitHub</a>
       </div>
-    </section>
 
-    <div class="interests container">
-      <div class="row">
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i style="color: #0563bb;" class="ri-cpu-line"></i>
-            <h3>Embedded Systems</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i style="color: #0563bb;" class="ri-u-disk-line" style="color: #5578ff;"></i>
-            <h3>Robotics and Controls</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i style="color: #0563bb;" class="ri-mind-map" style="color: #e80368;"></i>
-            <h3>Machine Learning</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i style="color: #0563bb;" class="ri-cloud-line" style="color: #28a745;"></i>
-            <h3>AWS</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <section id="experience" class="services">
-      <div class="container">
-        <div class="section-title">
-          <h2>Experience</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;">
-                <a href="https://tech.asu.edu/about" style="color: #0563bb;" target="_blank">Enterprise Technology
-                  <sup><i style="color: #0563bb;" class="fa fa-external-link" style="font-size:12px"></i></sup>
-                </a>
-                <br>
-              </h4>
-              <span style="float: right">
-                <h5 style="text-align:left;">October 2022 - Present</h5>
-              </span>
-              <h4 style="text-align:left;color:#000000"><em>Embedded Systems Engineer</em></h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> Implemented AES Encryption in a UHF mesh protocol for enhanced security in ASU cart tracking, utilizing technologies such as C++, LoRa, MQTT, and AWS IoT Core.
-                </li>
-                <li><i class="bx bx-circle"></i> Developed a BLE mesh network on ESP32 for efficient SOS alerts, integrated with React-Native for seamless operation on Android and iOS platforms, thus improving emergency response capabilities.
-                </li>
-                <li><i class="bx bx-circle"></i> Orchestrated the creation of AWS Lambda functions in conjunction with API Gateways and Timestream, resulting in a 30% improvement in data accuracy and retrieval speed, achieved through proficient use of Python. Also optimized the mpu9250 sensor in IoT trackers, significantly extending battery life to 3 years and reducing maintenance costs by 40%.
-                </li>
-              </ul>
-              <br>
+      <!-- Quick Wins (KPIs) -->
+      <div class="section" aria-label="Highlights">
+        <div class="kpis" role="list">
+          <div class="kpi" role="listitem"><i class="bi bi-rocket-takeoff" aria-hidden="true"></i>
+            <div><strong>~10 tok/sec</strong>
+              <div class="muted">LLM inference on AWS Lambda (C binaries / llama.cpp)</div>
             </div>
-            <br>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;">
-                <a href="https://ai.asu.edu/" style="color: #0563bb;" target="_blank">Enterprise Technology
-                  <sup><i style="color: #0563bb;" class="fa fa-external-link" style="font-size:12px"></i></sup>
-                </a>
-                <br>
-              </h4>
-              <span style="float: right">
-                <h5 style="text-align:left;">July 2023 - Present</h5>
-              </span>
-              <h4 style="text-align:left;color:#000000"><em>ML Ops and AI Development Engineer</em></h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> Developed a Python library for accessing 45 LLM models, routing between vision and audio using Lambda and API Gateway.</li>
-                <li><i class="bx bx-circle"></i> Deployed Terraform plans to create and manage AWS clusters and instances for POC, beta, and production stages.</li>
-                <li><i class="bx bx-circle"></i> Managed SQS for Lambdas via Terraform and deployed multi-stage Dockers on Kaniko for continuous deployment.</li>
-                <li><i class="bx bx-circle"></i> Architected LLM deployment on AWS Lambda using binaries in C, achieving 10 tokens/sec, optimizing cost-efficiency.</li>
-                <li><i class="bx bx-circle"></i> Integrated text-to-speech, speech-to-text, and facial recognition on a robot head running on Raspberry Pi using multi-threading.</li>
-                <li><i class="bx bx-circle"></i> Added Lambda Insights for memory profiling, effectively reducing the memory required for every lambda and saving cost.</li>
-                </li>
-              </ul>
-              <br>
+          </div>
+          <div class="kpi" role="listitem"><i class="bi bi-diagram-3" aria-hidden="true"></i>
+            <div><strong>45+ models</strong>
+              <div class="muted">Unified routing & access via Python lib</div>
             </div>
-            <br>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;">
-                <a href="https://tech.asu.edu/about" style="color: #0563bb;" target="_blank">Enterprise Technology
-                  <sup><i style="color: #0563bb;" class="fa fa-external-link" style="font-size:12px"></i></sup>
-                </a>
-                <br>
-              </h4>
-              <span style="float: right">
-                <h5 style="text-align:left;">October 2023 - July 2023</h5>
-              </span>
-              <h4 style="text-align:left;color:#000000"><em>Embedded Systems Engineer Engineer</em></h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> Implemented AES-128 encryption to enhance the security of custom UHF mesh networks using MQTT on an edge device.</li>
-                <li><i class="bx bx-circle"></i> Engineered a BLE LoRa mesh network on ESP32 for SOS alerts, significantly improving emergency response efficiency.</li>
-                <li><i class="bx bx-circle"></i> Optimized MPU9250 sensor in IoT trackers, extending battery life to 1 year by enabling deep sleep mode.</li>
-                <li><i class="bx bx-circle"></i> Maintained a LoRa and LoRaWAN mesh network with 25 nodes to track golf carts on campus via MQTT on AWS.</li>
-              </ul>
-              <br>
-            </div>
-            <br>
-<div class="col-md-12 mt-4 mt-md-0 icon-box" style="padding-top: 0; padding-bottom: 0;
-                        border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;"><a href="https://birth.engineering.asu.edu/" style="color: #0563bb;"
-                  target="_blank">Bio-Inspired Robotics, Technology and Healthcare Lab (BIRTH Lab) <sup><i
-                      style="color: #0563bb;" class="fa fa-external-link" style="font-size:12px"></i></sup></a><br>
-              </h4>
-              <span style="float: right">
-                <h5 style="text-align:left;">Dec 2022 - Present</h5>
-              </span>
-              <h4 style="text-align:left;color:#000000"><em>Research Assistant</em></h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> Automated friction analysis of PDMS pads on curved surfaces, leading 180 experiments for thesis research.</li>
-                <li><i class="bx bx-circle"></i> Designed a 3-axis testing apparatus with a 6-axis load cell and a PID controller, achieving robust control.</li>
-                <li><i class="bx bx-circle"></i> Controlled UR-16e 6-axis robotic arm for load-carrying tasks and designed a SpaceMouse controller in ROS.</li>                
-              </ul><br>
-            </div>
-            <br>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" style="padding-top: 0; padding-bottom: 0;
-                        border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;"><a href="https://www.instagram.com/djs_kronos_india/" style="color: #0563bb;"
-                  target="_blank">DJS Kronos India <sup><i style="color: #0563bb;" class="fa fa-external-link"
-                      style="font-size:12px"></i></sup></a>
-                <a href="https://www.youtube.com/watch?v=q3fRnUZIIJc" target="_blank"
-                  style="float:right; margin-left: 10px;">
-                  <i class="bx bxl-youtube" style="font-size:24px"></i>
-                </a>
-                <br>
-              </h4>
-              <span style="float: right">
-                <h5 style="text-align:left;">Mar 2019 - May 2021</h5>
-              </span>
-              <h4 style="text-align:left;color:#000000"><em>Vice Captain</em></h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> Led the design of a 4WD ATV on Simulink, achieving a 17% increase in operational efficiency; awarded 2nd Best 4WD Team.</li>
-                <li><i class="bx bx-circle"></i> Built a DAQ system using the GSM SIM 900 module on a Raspberry Pi Zero via ThingSpeak Communication.</li>                
-              </ul><br>
+          </div>
+          <div class="kpi" role="listitem"><i class="bi bi-speedometer2" aria-hidden="true"></i>
+            <div><strong>15× faster</strong>
+              <div class="muted">28 Docker images: 30m → 2m via parallel builds</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="portfolio" class="services">
-      <div class="container">
-        <div class="section-title">
-          <h2>Projects</h2>
+    <!-- WORK -->
+    <section id="work" class="container section" aria-labelledby="work-heading">
+      <h2 id="work-heading">Recent Work</h2>
+      <div class="timeline" role="list">
+        <article class="tl card" role="listitem">
+          <div class="tlhead">
+            <div>
+              <strong>ML Ops &amp; AI Development Engineer</strong>
+              <div class="muted">Enterprise Technology — Tempe, AZ</div>
+            </div>
+            <div class="muted"><time datetime="2023-06">06/2023</time> – <time datetime="present">Present</time></div>
+          </div>
+          <ul class="worklist">
+            <li>Python library exposing <strong>45+ LLMs</strong> with multi‑modal routing on AWS Lambda &amp; API
+              Gateway.</li>
+            <li>Deployed LLM inference on <span class="mono">AWS Lambda</span> using <span class="mono">llama.cpp</span>
+              C binaries (~<strong>10 tok/s</strong>).</li>
+            <li>Multi‑threaded Raspberry Pi app with TTS, STT, facial recognition, and local LLM.</li>
+            <li>Model‑as‑a‑Service: fine‑tuned endpoints, proxy servers, Redis/Lua rate limits + caching.</li>
+            <li>Terraform infra across stages; microservices (Lambda, DynamoDB, S3, API GW); Google OAuth2 integrations.
+            </li>
+            <li>EC2/Kubernetes parallel builds on Jenkins: <strong>28 images → 2 minutes</strong>.</li>
+            <li>Ops: SNS alerts, cross‑cloud provisioning, Redshift↔DynamoDB zero‑ETL, Firecrawl caching.</li>
+          </ul>
+        </article>
+
+        <article class="tl card" role="listitem">
+          <div class="tlhead">
+            <div>
+              <strong>Graduate Student Researcher — Thesis</strong>
+              <div class="muted">Bio‑Inspired Robotics, Technology &amp; Healthcare Lab — Tempe, AZ</div>
+            </div>
+            <div class="muted"><time datetime="2022-12">12/2022</time> – <time datetime="2024-05">05/2024</time></div>
+          </div>
+          <ul class="worklist">
+            <li>Automated <strong>180</strong> friction experiments via custom 3‑axis rig &amp; 6‑axis load cell (−40%
+              setup time).</li>
+            <li>ROS2 PID control for UR‑16e robotic arm enabling adaptive load‑carrying tasks.</li>
+            <li>ROS‑based SpaceMouse controller for real‑time manipulation.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="container section" aria-labelledby="projects-heading">
+      <div class="tlhead" style="margin-bottom:8px">
+        <h2 id="projects-heading" style="margin:0">Selected Projects</h2>
+        <div class="filters" role="toolbar" aria-label="Filter projects">
+          <button class="filter" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="ml" aria-pressed="false">ML/AI</button>
+          <button class="filter" data-filter="cloud" aria-pressed="false">Cloud</button>
+          <button class="filter" data-filter="cv" aria-pressed="false">RAG</button>
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="col-md-12 mt-4 mt-md-0 icon-box"
-              style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;">
-                <span style="color: #0563bb;">Dexterous Manipulation with a Robotic Hand</span> <sup><i
-                    style="color:#0563bb;font-size:12px;"></i></sup>
-                <a href="https://www.youtube.com/watch?v=ftylrpc0TUw" target="_blank"
-                  style="float:right; margin-left: 10px;">
-                  <i class="bx bxl-youtube" style="font-size:24px"></i>
-                </a>
-                <a href="https://github.com/tellsiddh/awac-implementation" target="_blank"
-                  style="float:right; margin-left: 10px;">
-                  <i class="bx bxl-github" style="font-size:24px"></i>
-                </a>
-                <a href="assets/files/Robotic Hand Manipulation.pdf" target="_blank" style="float:right;">
-                  <i class="far fa-file" style="font-size:20px"></i>
-                </a>
-              </h4>
-              <!-- <span style="float: right"><h5 style="text-align:left;">Aug 2019 - Oct 2020</h5></span> -->
-              <h4 style="text-align:left;color:#000000"><em>AWAC, Reinforcement Learning</em></h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> Developed an Advantage Weighted Actor-Critic algorithm to enhance the performance of a 6-DoF robotic hand.
-                  Achieved up to a 20% improvement in dexterous manipulation success rates.</li>
-                </ul><br>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/ftylrpc0TUw" style="display:block; margin:auto;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <br>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;">
-                <span style="color: #0563bb;">Multi Robot Search and Rescue</span> <sup><i style="color:#0563bb;font-size:12px;"></i></sup>
-                <a href="https://github.com/tellsiddh/ros-multirobot-search-rescue" target="_blank" style="float:right; margin-left: 10px;">
-                  <i class="bx bxl-github" style="font-size:24px"></i>
-                </a>
-             <a href="assets/files/Multi_Robot_Search_and_Rescue - Revised.pdf" target="_blank" style="float:right;">
-                  <i class="far fa-file" style="font-size:20px"></i>
-                </a>
-              </h4>
-              <h4 style="text-align:left;color:#000000"><em>Gazebo, ROS, RVIZ, RTAB</em></h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> Developed a decentralized quadcopter swarm with Potential-Field and Frontier Exploration algorithms for dynamic 3D mapping.</li>
-                <li><i class="bx bx-circle"></i> Enhanced exploration efficiency with a leader-trooper strategy, navigating through complex terrains and avoiding local minima.</li>
-                <li><i class="bx bx-circle"></i> Conducted ROS and Gazebo simulations, validating the swarm's ability to produce detailed maps and critical visual data.
-</li>                  
-              </ul><br>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/3h8HH4WYyCg" style="display:block; margin:auto;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <br>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/E00grbO4Z1s" style="display:block; margin:auto;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <br>
-              <img src="assets/multirobot_search_Rescue/python_exploration.gif" alt="Exploration GIF" style="display: block; margin: auto; width: 680px; height: auto;">
+      </div>
 
-              <br>
-            </div>
-            <br>
+      <div class="grid grid-2" id="projectGrid">
+        <!-- Papertrail -->
+        <article class="card project" data-tags="ml cloud">
+          <header>
+            <h3>Papertrail — Multi‑Modal OCR Document Organizer</h3>
+            <div class="muted mono">Python • OCR • AWS • OAuth</div>
+          </header>
+          <p>Document organizer with fine‑grained access control &amp; sharing. Multi‑modal OCR endpoint for accurate
+            file→text conversion. Google OAuth2 (Drive &amp; Picker) integration.</p>
+          <div class="chips" aria-label="Technologies used">
+            <span class="chip">FastAPI</span><span class="chip">Tesseract OCR</span><span
+              class="chip">Lambda</span><span class="chip">API Gateway</span>
+          </div>
+          <div class="links">
+            <a class="btn" href="https://github.com/tellsiddh" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-github" aria-hidden="true"></i> View Code</a>
+            <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a>
+          </div>
+        </article>
 
-            <div class="col-md-12 mt-4 mt-md-0 icon-box"
-              style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;">
-                <span style="color: #0563bb;">Self Balancing Stewart Platform</span> <sup><i
-                    style="color:#0563bb;font-size:12px;"></i></sup>
-                <a href="https://www.youtube.com/watch?v=P9DKjQvbcVY" target="_blank"
-                  style="float:right; margin-left: 10px;">
-                  <i class="bx bxl-youtube" style="font-size:24px"></i>
-                </a>
-                <a href="https://github.com/tellsiddh/stewart-platform-for-object-balancing" target="_blank"
-                  style="float:right;">
-                  <i class="bx bxl-github" style="font-size:24px"></i>
-                </a>
-              </h4>
-              <!-- <span style="float: right"><h5 style="text-align:left;">Aug 2019 - Oct 2020</h5></span> -->
-              <h4 style="text-align:left;color:#000000"><em>PID Controller, MATLAB, Simulink</em></h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> Masterfully engineered a closed-loop PID controller for the Stewart platform using Simulink, strategically optimizing ball motion stability. </li>
-                <li><i class="bx bx-circle"></i>Achieved a breakthrough in control precision by reducing Steady State Error through integral tuning, enhancing system responsiveness to an impressive 0.5 seconds, reflecting a seamless synergy of theoretical control principles and hands-on implementation.
-                </li>
-              </ul><br>
-                            <!-- Centering the YouTube video iframe -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/P9DKjQvbcVY" style="display:block; margin:auto;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <br>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box"
-              style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;">
-                <span style="color: #0563bb;">UAV Line Follower Drone</span> <sup><i
-                    style="color:#0563bb;font-size:12px;"></i></sup>
-                <a href="https://www.youtube.com/watch?v=BZZOMT-J5b0&t" target="_blank"
-                  style="float:right; margin-left: 10px;">
-                  <i class="bx bxl-youtube" style="font-size:24px"></i>
-                </a>
-                <a href="https://github.com/tellsiddh/UAV-line-follower" target="_blank" style="float:right;">
-                  <i class="bx bxl-github" style="font-size:24px"></i>
-                </a>
-              </h4>
-              <!-- <span style="float: right"><h5 style="text-align:left;">Aug 2019 - Oct 2020</h5></span> -->
-              <h4 style="text-align:left;color:#000000"><em>MATLAB, Simulink, Edge Detection</em></h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> Pioneered a cutting-edge Line Follower function for the Parrot Mambo Mini-Drone, harnessing advanced edge detection techniques to rapidly calculate the nearest edge. </li>
-                <li><i class="bx bx-circle"></i>Skillfully identified specific HSV values of the track within an astounding 20 ms using Simulink, culminating in a 95\% accuracy rate across 40 rigorous tests, marking a significant milestone in UAV navigation and control.</li>
-              </ul><br>
-                                          <!-- Centering the YouTube video iframe -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BZZOMT-J5b0" style="display:block; margin:auto;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              
-            </div>
-            <br>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box"
-              style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;">
-                <span style="color: #0563bb;">Statistical Analysis of Machine Learning Algorithms for Fraud
-                  Detection</span> <sup><i style="color:#0563bb;font-size:12px;"></i></sup>
-                <a href="https://github.com/tellsiddh/fraud-detection-ml-statistical-analysis" target="_blank"
-                  style="float:right; margin-left: 10px;">
-                  <i class="bx bxl-github" style="font-size:24px"></i>
-                </a>
-                <a href="assets/files/Statistical Analysis of Machine Learning Algorithms for Fraud Detection in Bank Transactions.pdf"
-                  target="_blank" style="float:right;">
-                  <i class="far fa-file" style="font-size:20px"></i>
-                </a>
-              </h4>
-              <!-- <span style="float: right"><h5 style="text-align:left;">Aug 2019 - Oct 2020</h5></span> -->
-              <h4 style="text-align:left;color:#000000"><em>Deep Learning, RNN, One-Hot Encoding</em></h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> Masterminded a robust fraud detection system by meticulously analyzing and employing cutting-edge machine learning algorithms on an expansive dataset of 1 million bank transactions. Leveraged one-hot encoding, TensorFlow, and innovative preprocessing strategies like SMOTE in Python to optimize model training. </li>
-                  <li><i class="bx bx-circle"></i> Skillfully validated model variations through a rigorous feature importance assessment and precise statistical evaluations, resulting in a remarkable 97.2\% accuracy rate, setting a new benchmark in the field of financial security.</li>
-              </ul><br>
-            </div>
-            <br>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box"
-              style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;">
-                <span style="color: #0563bb;">NaviGate Console Application</span> <sup><i
-                    style="color:#0563bb;font-size:12px;"></i></sup>
-                <a href="https://github.com/tellsiddh/NaviGate" target="_blank" style="float:right;">
-                  <i class="bx bxl-github" style="font-size:24px"></i>
-                </a>
-              </h4>
-              <h4 style="text-align:left;color:#000000"><em>C Programming, Console Application, File Navigation</em>
-              </h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> Designed and developed NaviGate, a user-friendly console application
-                  for navigating directories and viewing file contents on Windows systems using a command-line
-                  interface. Developed in C, it highlights my expertise in programming and system development.</li>
-              </ul><br>
-            </div>
-            <br>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;">
-                <span style="color: #0563bb;">Custom LoRa and Ethernet Communication Board</span> <sup><i style="color:#0563bb;font-size:12px;"></i></sup>
-                <a href="https://github.com/tellsiddh/esp32-lora-ethernet-board" target="_blank" style="float:right; margin-left: 10px;">
-                  <i class="bx bxl-github" style="font-size:24px"></i>
-                </a>
-              </h4>
-              <h4 style="text-align:left;color:#000000"><em>ESP32 S3, PCB Design, Embedded C, FreeRTOS</em></h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> Conceptualized and masterfully developed a state-of-the-art communication board, integrating Xtensa LX7 (32-bit, 240 MHz), RFM95W LoRa (915 MHz, 15 km range), and LAN8720 Ethernet, establishing a new benchmark in versatile wireless and wired connectivity.</li>
-                <li><i class="bx bx-circle"></i> Executed a meticulous 4-layer PCB design with 50-ohm impedance control for impeccable RF signal integrity, leveraging innovative techniques in embedded C and FreeRTOS. </li>
-                <li><i class="bx bx-circle"></i>Crafted concurrent communication tasks, OTA updates, and advanced power management strategies that pushed the envelope of efficiency and reliability. </li>
-                  <li><i class="bx bx-circle"></i>The resultant system not only stands as a testament to cutting-edge engineering but also serves as a blueprint for future advancements in the integration of LoRa and Ethernet technologies.</li>
-                <li><i class="bx bx-circle"></i> Conducted comprehensive testing for performance validation, including RF signal quality analysis, Ethernet throughput benchmarking, and system latency measurement.</li>
-              </ul><br>
-            </div>
-            <br>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;">
-                <span style="color: #0563bb;">Dynamic Pathfinding in Complex Environments</span> <sup><i style="color:#0563bb;font-size:12px;"></i></sup>
-                <a href="https://github.com/tellsiddh/dynamic-path-finding" target="_blank" style="float:right; margin-left: 10px;">
-                  <i class="bx bxl-github" style="font-size:24px"></i>
-                </a>
-                <!-- Add link to any additional files, such as PDF documentation -->
-                <!-- <a href="assets/files/Dynamic_Pathfinding.pdf" target="_blank" style="float:right;">
-                  <i class="far fa-file" style="font-size:20px"></i>
-                </a> -->
-              </h4>
-              <h4 style="text-align:left;color:#000000"><em>Python, Matplotlib, Algorithm Design, Dynamic Programming</em></h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> Innovated in the field of dynamic pathfinding by skillfully developing, analyzing, and comparing a series of cutting-edge algorithms such as A*, Dijkstra's, DFS, BFS, and Greedy Best-First Search. </li>
-                <li><i class="bx bx-circle"></i> Utilized Python and Matplotlib to adapt these algorithms to complex, real-world scenarios with moving obstacles, considering metrics like path length (24-25 steps) and time (0.0011 to 3.288 seconds). </li>
-                  <li><i class="bx bx-circle"></i> The novel approach led to unparalleled efficiency in navigation, providing a visually engaging analysis that illuminated new insights into the behavior of each algorithm, setting a precedent in adaptability and responsiveness in pathfinding solutions.</li>
-              </ul><br>
-            </div>
-                        
+        <!-- Audio Projection Embeddings -->
+        <article class="card project" data-tags="ml">
+          <header>
+            <h3>Audio Projection Embeddings for RAG</h3>
+            <div class="muted mono">PyTorch • CLAP • RAG</div>
+          </header>
+          <p>Projection model mapping <span class="mono">512→1536</span> vectors using CLAP on LibriSpeech to enable
+            audio‑query RAG without transcription.</p>
+          <div class="chips"><span class="chip">PyTorch</span><span class="chip">Embeddings</span><span
+              class="chip">RAG</span></div>
+          <div class="links">
+            <a class="btn" href="https://github.com/tellsiddh" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-github" aria-hidden="true"></i> View Code</a>
+            <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a>
+          </div>
+        </article>
+
+        <!-- Dexterous Manipulation -->
+        <article class="card project" data-tags="ml cv">
+          <header>
+            <h3>Dexterous Manipulation with a Robotic Hand</h3>
+            <div class="muted mono">RL • Actor‑Critic • Python</div>
+          </header>
+          <p>Advantage‑Weighted Actor‑Critic implementation improved 6‑DoF manipulation success by ~20%.</p>
+          <div class="chips"><span class="chip">AWAC</span><span class="chip">Gym</span><span class="chip">Linux</span>
+          </div>
+          <div class="links">
+            <a class="btn" href="https://github.com/tellsiddh" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-github" aria-hidden="true"></i> View Code</a>
+            <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a>
+          </div>
+        </article>
+
+        <!-- Multi‑Robot Search & Rescue -->
+        <article class="card project" data-tags="cv ml">
+          <header>
+            <h3>Multi‑Robot Search &amp; Rescue</h3>
+            <div class="muted mono">ROS2 • RTAB • OpenCV</div>
+          </header>
+          <p>Decentralized quadcopter swarm with Potential‑Field &amp; Frontier Exploration for dynamic 3D mapping;
+            validated 100×100 grid mapping in Gazebo while avoiding local minima.</p>
+          <div class="chips"><span class="chip">ROS2</span><span class="chip">Gazebo</span><span
+              class="chip">RTAB</span></div>
+          <div class="links">
+            <a class="btn" href="https://github.com/tellsiddh" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-github" aria-hidden="true"></i> View Code</a>
+            <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a>
+          </div>
+        </article>
+
+        <!-- Fraud Detection -->
+        <article class="card project" data-tags="ml">
+          <header>
+            <h3>Fraud Detection — Statistical Analysis</h3>
+            <div class="muted mono">Deep Learning • RNN • SMOTE</div>
+          </header>
+          <p>End‑to‑end pipeline with feature importance &amp; statistical validation; ~97.2% accuracy.</p>
+          <div class="chips"><span class="chip">TensorFlow/PyTorch</span><span class="chip">One‑Hot</span><span
+              class="chip">Imbalance</span></div>
+          <div class="links">
+            <a class="btn" href="https://github.com/tellsiddh" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-github" aria-hidden="true"></i> View Code</a>
+            <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a>
+          </div>
+        </article>
+
+        <!-- UAV Line Follower -->
+        <article class="card project" data-tags="cv">
+          <header>
+            <h3>UAV Line‑Follower (Parrot Mambo)</h3>
+            <div class="muted mono">Simulink • Edge Detection</div>
+          </header>
+          <p>Edge‑based HSV tracking with ~20 ms inference; ~95% accuracy across 40 tests; deployed via Simulink.</p>
+          <div class="chips"><span class="chip">MATLAB</span><span class="chip">Simulink</span><span
+              class="chip">HSV</span></div>
+          <div class="links">
+            <a class="btn" href="https://github.com/tellsiddh" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-github" aria-hidden="true"></i> View Code</a>
+            <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TECH / SKILLS -->
+    <section id="skills" class="container section" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Tech I use</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Languages</h3>
+          <p class="mono">Python, Embedded C/C++, SQL, Bash, Terraform, Groovy</p>
+        </div>
+        <div class="card">
+          <h3>Software &amp; Platforms</h3>
+          <p class="mono">Docker, ROS2, Jenkins, Git, Kubernetes</p>
+        </div>
+        <div class="card">
+          <h3>Frameworks</h3>
+          <p class="mono">PyTorch, FastAPI, OpenCV, Tesseract OCR, llama.cpp</p>
+        </div>
+        <div class="card">
+          <h3>AWS (Core)</h3>
+          <p class="mono">Lambda, API Gateway, S3, SQS, EC2, VPC, DynamoDB</p>
+        </div>
+        <div class="card">
+          <h3>AWS (Data)</h3>
+          <p class="mono">Redshift, Glue, ElastiCache</p>
+        </div>
+        <div class="card">
+          <h3>Focus Areas</h3>
+          <div class="chips" role="list">
+            <span class="chip" role="listitem">Model Serving</span><span class="chip"
+              role="listitem">Microservices</span><span class="chip" role="listitem">Observability</span>
+            <span class="chip" role="listitem">CI/CD</span><span class="chip" role="listitem">Cost Efficiency</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ======= Patents and Publications ====== -->
-
-    <section id="patents-publications" class="services">
-      <div class="container">
-        <div class="section-title">
-          <h2>Patents & Publications</h2>
+    <!-- EDUCATION -->
+    <section id="education" class="container section" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Arizona State University</h3>
+          <div class="muted">Tempe, AZ — <time datetime="2024-05">May 2024</time></div>
+          <p><strong>M.S., Robotics &amp; Autonomous Systems (Thesis)</strong></p>
+          <p class="muted">Focus: Reinforcement Learning, Deep Learning, Multi‑Robot Systems, Optimal Control</p>
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-
-            <!-- Patent section -->
-
-            <div class="col-md-12 mt-4 mt-md-0 icon-box"
-              style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;"><a href="assets/files/ViewJournal.pdf#page=93" style="color: #0563bb;"
-                  target="_blank">Steering Knuckle Joint for Double A-arm Suspension System <sup><i
-                      style="color: #0563bb;" class="fa fa-external-link" style="font-size:12px"></i></sup></a><a
-                  href="assets/files/Steering Knuckle Joint for Double A arm Suspension System.pdf" target="_blank"
-                  style="float:right;">
-                  <i class="far fa-file" style="font-size:20px"></i>
-                </a><br>
-              </h4>
-              <span style="float: right">
-                <h5 style="text-align:left;">Patent No. 378832-001</h5>
-              </span>
-              <h4 style="text-align:left;color:#000000"><em>Four-wheel Drive, r-zeppa Joint, All-terrain Vehicle
-                  Design</em></h4>
-
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> The steering knuckle joint is an integral component that links the
-                  suspension arms, steering tie rod, and wheel assembly.</li>
-                <li><i class="bx bx-circle"></i> Specifically designed for the double A-arm suspension system of a
-                  four-wheel-drive all-terrain vehicle, this knuckle incorporates the r-zeppa joint as an active
-                  spindle. Shocks are strategically positioned on the upper A-arm.</li>
-                <li><i class="bx bx-circle"></i> The knuckle also boasts an inbuilt steering arm, directly connecting to
-                  the tie rod, ensuring seamless linkage.</li>
-              </ul>
-              <br>
-            </div>
-
-
-            <div class="col-md-12 mt-4 mt-md-0 icon-box"
-              style="padding-top: 0; padding-bottom: 0; border-radius: 0.5rem;">
-              <br>
-              <h4 style="text-align:left;"><a href="assets/files/Single Stage Open Differential Thesis.pdf" style="color: #0563bb;"
-                target="_blank">Design Of Single Stage Open Differential (Pending) <sup><i
-                    style="color: #0563bb;" class="fa fa-external-link" style="font-size:12px"></i></sup></a><a
-                href="assets/files/Single Stage Open Differential.pdf" target="_blank"
-                style="float:right;">
-                <i class="far fa-file" style="font-size:20px"></i>
-              </a><br>
-            </h4>
-              <span style="float: right">
-                <h5 style="text-align:left;">Patent No. 378831-001</h5>
-              </span>
-              <h4 style="text-align:left;color:#000000"><em>Automobile Dynamics, Differential Mechanism, Power
-                  Distribution</em></h4>
-              <ul style="text-align:left;">
-                <li><i class="bx bx-circle"></i> The open differential is a pivotal mechanism in automobiles, especially
-                  when navigating turns. Due to the differing distances traveled by the inside and outside wheels,
-                  there's a need for them to rotate at unique speeds while still being driven by the engine.</li>
-                <li><i class="bx bx-circle"></i> This is achieved using the differential. Apart from ensuring smooth
-                  turns, it serves to reduce the rotations from the gearbox before being transmitted to the rear axles.
-                </li>
-                <li><i class="bx bx-circle"></i> This device also changes the power's axis of rotation by 90° and
-                  efficiently distributes power to the rear driving axles, whether the vehicle is moving straight or
-                  turning.</li>
-              </ul>
-              <br>
-            </div>
-            <!-- End of Patent section -->
-
-            <!-- If you have any publications, they can be added here in a similar fashion -->
-
-          </div>
+        <div class="card">
+          <h3>D. J. Sanghvi College of Engineering</h3>
+          <div class="muted">Mumbai, IN — <time datetime="2022-05">May 2022</time></div>
+          <p><strong>B.E., Mechanical</strong></p>
         </div>
       </div>
     </section>
 
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="section-title">
-          <h2>Contact</h2>
+    <!-- LEADERSHIP -->
+    <section id="extras" class="container section" aria-labelledby="leadership-heading">
+      <h2 id="leadership-heading">Leadership &amp; Community</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>DJS KRONOS INDIA — Vice Captain</h3>
+          <div class="muted">Mumbai, IN — <time datetime="2019-03">03/2019</time> – <time
+              datetime="2021-05">05/2021</time></div>
+          <ul class="worklist">
+            <li>Led software &amp; co‑led mechanical design for a 4WD ATV in Simulink; <strong>+17% efficiency</strong>;
+              2nd Best 4WD design award.</li>
+            <li>Built GSM SIM900 DAQ on Raspberry Pi Zero with ThingSpeak telemetry.</li>
+          </ul>
         </div>
-        <div class="row mt-1 justify-content-center">
-          <div class="col-lg-12">
-            <div class="info d-flex flex-wrap justify-content-between">
-              <div class="phone">
-                <a href="tel:+16233267382">
-                  <i class="bx bx-phone"></i>
-                  <h4>Call</h4>
-                  <p>+1 623 326 7382
-                </a></p>
-              </div>
-
-              <div class="email">
-                <a href="https://www.linkedin.com/in/tellsiddh/" target="_blank">
-                  <i class="bi bi-linkedin"></i>
-                  <h4>LinkedIn</h4>
-                  <p>linkedin.com/in/tellsiddh/
-                </a></p>
-              </div>
-
-              <div class="email">
-                <a href="https://www.github.com/tellsiddh" target="_blank">
-                  <i class="bi bi-github"></i>
-                  <h4>Github</h4>
-                  <p>github.com/tellsiddh
-                </a></p>
-              </div>
-
-              <div class="email">
-                <a href="mailto:tellsiddh@gmail.com" target="_blank">
-                  <i class="bx bxl-gmail"></i>
-                  <h4>Email</h4>
-                  <p>tellsiddh@gmail.com
-                </a></p>
-
-              </div>
-            </div>
-            <br>
-          </div>
+        <div class="card">
+          <h3>Hackathons — Evaluator &amp; Mentor</h3>
+          <div class="muted">Tempe, AZ — <time datetime="2024-03">03/2024</time> – <time
+              datetime="2024-10">10/2024</time></div>
+          <p>Evaluated AI Innovation Hackathons &amp; Spark Tank; mentored teams integrating AI capabilities.</p>
+        </div>
+        <div class="card">
+          <h3>AI Acceleration — Colleague</h3>
+          <div class="muted">Tempe, AZ — <time datetime="2024-05">05/2024</time> – <time
+              datetime="present">Present</time></div>
+          <ul class="worklist">
+            <li>Approved architecture plans; guided implementation &amp; code quality across APIs.</li>
+            <li>Led sprint planning &amp; alignment between engineering and product.</li>
+          </ul>
         </div>
       </div>
     </section>
-    <!-- End Contact Section -->
 
-  </main><!-- End #main -->
-
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Siddharth Jain</span></strong>. All Rights Reserved.
+    <!-- CONTACT -->
+    <section id="contact" class="container section" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <div class="contact-grid">
+        <a class="card" href="mailto:tellsiddh@gmail.com" rel="noopener noreferrer">
+          <h3><i class="bi bi-envelope-open" aria-hidden="true"></i> Email</h3>
+          <p class="mono">tellsiddh@gmail.com</p>
+        </a>
+        <a class="card" href="tel:+16233267382">
+          <h3><i class="bi bi-telephone" aria-hidden="true"></i> Phone</h3>
+          <p class="mono" aria-label="Phone number">+1 (623) 326 7382</p>
+        </a>
+        <a class="card" href="https://tellsiddh.com" target="_blank" rel="noopener noreferrer">
+          <h3><i class="bi bi-globe2" aria-hidden="true"></i> Website</h3>
+          <p class="mono">tellsiddh.com</p>
+        </a>
+        <a class="card" href="https://www.linkedin.com/in/tellsiddh/" target="_blank" rel="noopener noreferrer">
+          <h3><i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn</h3>
+          <p class="mono">linkedin.com/in/tellsiddh</p>
+        </a>
+        <a class="card" href="https://github.com/tellsiddh" target="_blank" rel="noopener noreferrer">
+          <h3><i class="bi bi-github" aria-hidden="true"></i> GitHub</h3>
+          <p class="mono">github.com/tellsiddh</p>
+        </a>
       </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div class="muted">© <span id="year"></span> Siddharth Rohit Jain</div>
+      <div class="muted">Tempe, AZ • <a href="mailto:tellsiddh@gmail.com"
+          rel="noopener noreferrer">tellsiddh@gmail.com</a></div>
     </div>
   </footer>
 
-  <a href="#" class="back-to-top"><i class="bx
-  bx-up-arrow-alt"></i></a>
-  <!-- <div id="preloader"></div> -->
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  <script src="assets/vendor/iconify.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/js/main.js"></script>
+    // Mark current section in nav for a11y
+    const navLinks = document.querySelectorAll('header nav a');
+    const sections = [...document.querySelectorAll('main section[id]')];
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + id ? 'page' : 'false'));
+        }
+      }
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0.01 });
+    sections.forEach(sec => io.observe(sec));
 
+    // Project filters (keyboard & a11y friendly)
+    // Project filters (keyboard & a11y friendly)
+    const filters = [...document.querySelectorAll('.filter')];
+    const cards = [...document.querySelectorAll('#projectGrid .project')];
+
+    function activate(btn) {
+      filters.forEach(b => b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'));
+      const tag = (btn.dataset.filter || 'all').toLowerCase();
+
+      cards.forEach(card => {
+        // robust split: any whitespace, trims out empties
+        const tags = (card.dataset.tags || '')
+          .toLowerCase()
+          .split(/\s+/)
+          .filter(Boolean);
+
+        const show = (tag === 'all' || tags.includes(tag));
+        card.hidden = !show;
+      });
+    }
+
+    // Click + keyboard
+    filters.forEach(btn => {
+      btn.addEventListener('click', () => activate(btn));
+      btn.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();           // stop page from scrolling on Space
+          activate(btn);
+        }
+      });
+    });
+
+    // Initialize based on the button already marked as pressed (defaults to "All")
+    const initiallyPressed = filters.find(b => b.getAttribute('aria-pressed') === 'true') || filters[0];
+    activate(initiallyPressed);
+
+    // Ensure hidden actually hides in all browsers / CSS stacks
+    const hiddenStyle = document.createElement('style');
+    hiddenStyle.textContent = `[hidden]{display:none !important}`;
+    document.head.appendChild(hiddenStyle);
+
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initialize
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.body.classList.add('dark');
+    }
+
+    function updateIcon() {
+      if (document.body.classList.contains('dark')) {
+        themeToggle.innerHTML = '<i class="bi bi-sun-fill" aria-hidden="true"></i>';
+        themeToggle.setAttribute('aria-label', 'Switch to light mode');
+      } else {
+        themeToggle.innerHTML = '<i class="bi bi-moon-fill" aria-hidden="true"></i>';
+        themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+      }
+    }
+    updateIcon();
+
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+      updateIcon();
+    });
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    function syncThemeColor() {
+      themeMeta.setAttribute('content', document.body.classList.contains('dark') ? '#0b0f17' : '#ffffff');
+    }
+    syncThemeColor();
+    themeToggle.addEventListener('click', syncThemeColor);
+
+    const headerEl = document.querySelector('.nav');
+
+    function setHeaderOffset() {
+      const h = headerEl ? headerEl.offsetHeight : 64;
+      document.documentElement.style.setProperty('--header-h', `${h}px`);
+    }
+
+    // Set once on load and whenever layout changes size
+    setHeaderOffset();
+    window.addEventListener('resize', setHeaderOffset);
+
+    // If your theme toggle changes header height (icons/fonts), re-measure after the click:
+    themeToggle?.addEventListener('click', () => {
+      // next frame ensures DOM has applied the class/styles
+      requestAnimationFrame(setHeaderOffset);
+    });
+
+  </script>
 </body>
 
 </html>
