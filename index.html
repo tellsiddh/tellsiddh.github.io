@@ -246,7 +246,8 @@
       gap: 12px;
       align-items: center;
       font-weight: 800;
-      letter-spacing: .2px
+      letter-spacing: .2px;
+      font-size: 1.25rem;
     }
 
     .avatar {
@@ -309,7 +310,7 @@
 
     .sub {
       color: var(--muted);
-      max-width: 850px
+      max-width: fit-content;
     }
 
     .pill {
@@ -781,10 +782,10 @@
     <section id="top" class="container hero">
       <span class="pill" aria-label="Areas: ML, AI, Cloud, DevOps"><i class="bi bi-cpu" aria-hidden="true"></i> ML/AI •
         Cloud • DevOps</span>
-      <h1>Shipping scalable AI systems, cloud‑native infra, and seriously fast CI/CD.</h1>
+      <h1>Hi, I am Siddharth.</h1>
       <p class="sub">
-        I build production‑grade ML/AI applications, AWS‑first architectures, and developer tooling that make teams
-        faster.
+        From shipping scalable AI systems, cloud‑native infra, and seriously fast CI/CD, I build production‑grade ML/AI
+        applications and AWS‑first architectures.
         Strong in observability, automation, and cost‑efficient design.
       </p>
       <div class="cta" role="group" aria-label="Primary calls to action">
@@ -832,17 +833,36 @@
             <div class="muted"><time datetime="2023-06">06/2023</time> – <time datetime="present">Present</time></div>
           </div>
           <ul class="worklist">
-            <li>Python library exposing <strong>45+ LLMs</strong> with multi‑modal routing on AWS Lambda &amp; API
-              Gateway.</li>
-            <li>Deployed LLM inference on <span class="mono">AWS Lambda</span> using <span class="mono">llama.cpp</span>
-              C binaries (~<strong>10 tok/s</strong>).</li>
-            <li>Multi‑threaded Raspberry Pi app with TTS, STT, facial recognition, and local LLM.</li>
-            <li>Model‑as‑a‑Service: fine‑tuned endpoints, proxy servers, Redis/Lua rate limits + caching.</li>
-            <li>Terraform infra across stages; microservices (Lambda, DynamoDB, S3, API GW); Google OAuth2 integrations.
-            </li>
-            <li>EC2/Kubernetes parallel builds on Jenkins: <strong>28 images → 2 minutes</strong>.</li>
-            <li>Ops: SNS alerts, cross‑cloud provisioning, Redshift↔DynamoDB zero‑ETL, Firecrawl caching.</li>
+            <li><strong>LLM & AI Application Development:</strong></li>
+            <ul class="worklist" style="margin-top: 0; margin-bottom: 12px;">
+              <li>Engineered a Python library facilitating access to over <strong>45</strong> Large Language Models
+                (LLMs), with routing across multi-modal pipelines using AWS Lambda and API Gateway.</li>
+              <li>Deployed an LLM inference solution on AWS Lambda using <code>llama.cpp</code> C binaries, achieving
+                <strong>10 tokens/sec</strong>.
+              </li>
+              <li>Built a multi-threaded Python app for Raspberry Pi integrating text-to-speech, speech-to-text, facial
+                recognition, and a local LLM.</li>
+              <li>Fine-tuned LLMs and created proxy servers for a Model-as-a-Service framework to host and route
+                open-source models.</li>
+              <li>Implemented rate-limiting and caching with Lua scripting on ElastiCache Redis using sliding windows.
+              </li>
+            </ul>
+
+            <li><strong>Cloud Infrastructure & DevOps:</strong></li>
+            <ul class="worklist" style="margin-top: 0;">
+              <li>Provisioned scalable, multi-stage AWS infrastructure using Terraform.</li>
+              <li>Architected CI/CD pipelines with parallel Docker builds on Jenkins + Kubernetes, cutting build time
+                for <strong>28 images</strong> from <strong>30m to 2m</strong>.</li>
+              <li>Designed microservices using AWS Lambda, DynamoDB, S3, API Gateway; integrated OAuth2 with Google
+                Drive.</li>
+              <li>Implemented observability via SNS alerts; reduced downtime and improved traceability.</li>
+              <li>Automated secure cross-cloud provisioning across AWS and GCP.</li>
+              <li>Integrated Redshift and DynamoDB using zero‑ETL to build analytics-ready datamarts.</li>
+              <li>Developed <em>Firecrawl</em>, a caching layer for web crawling to reduce external API usage and cost.
+              </li>
+            </ul>
           </ul>
+
         </article>
 
         <article class="tl card" role="listitem">
@@ -908,7 +928,7 @@
           <div class="links">
             <a class="btn" href="https://github.com/tellsiddh" target="_blank" rel="noopener noreferrer"><i
                 class="bi bi-github" aria-hidden="true"></i> View Code</a>
-            <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a>
+            <!-- <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a> -->
           </div>
         </article>
 
@@ -924,7 +944,7 @@
           <div class="links">
             <a class="btn" href="https://github.com/tellsiddh" target="_blank" rel="noopener noreferrer"><i
                 class="bi bi-github" aria-hidden="true"></i> View Code</a>
-            <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a>
+            <!-- <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a> -->
           </div>
         </article>
 
@@ -941,7 +961,7 @@
           <div class="links">
             <a class="btn" href="https://github.com/tellsiddh" target="_blank" rel="noopener noreferrer"><i
                 class="bi bi-github" aria-hidden="true"></i> View Code</a>
-            <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a>
+            <!-- <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a> -->
           </div>
         </article>
 
@@ -957,7 +977,7 @@
           <div class="links">
             <a class="btn" href="https://github.com/tellsiddh" target="_blank" rel="noopener noreferrer"><i
                 class="bi bi-github" aria-hidden="true"></i> View Code</a>
-            <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a>
+            <!-- <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a> -->
           </div>
         </article>
 
@@ -973,7 +993,7 @@
           <div class="links">
             <a class="btn" href="https://github.com/tellsiddh" target="_blank" rel="noopener noreferrer"><i
                 class="bi bi-github" aria-hidden="true"></i> View Code</a>
-            <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a>
+            <!-- <a class="btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Request Demo</a> -->
           </div>
         </article>
       </div>
