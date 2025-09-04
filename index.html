@@ -183,11 +183,15 @@
       padding: 24px 16px;
     }
 
-    @media (min-width:480px) {
+    @media (max-width: 480px) {
+
+      body,
       .container {
-        padding: 28px 18px;
+        padding-left: 16px;
+        padding-right: 16px;
       }
     }
+
 
     @media (min-width:780px) {
       .container {
@@ -276,7 +280,7 @@
     }
 
     /* Collapse nav spacing a bit on very small screens */
-    @media (max-width:479.98px) {
+    @media (max-width:480px) {
       .nav .inner {
         gap: 8px
       }
@@ -584,7 +588,7 @@
     }
 
     /* ========== Small-screen Tweaks ========== */
-    @media (max-width:479.98px) {
+    @media (max-width:480px) {
       h1 {
         font-size: clamp(24px, 8vw, 34px)
       }
